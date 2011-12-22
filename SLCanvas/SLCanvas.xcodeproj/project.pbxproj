@@ -1,0 +1,231 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE90B5D614A394CD006C6864 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE90B5D514A394CD006C6864 /* Foundation.framework */; };
+		EE90B5DC14A394CD006C6864 /* SLCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = EE90B5DB14A394CD006C6864 /* SLCanvas.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EE90B5D214A394CD006C6864 /* libSLCanvas.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSLCanvas.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE90B5D514A394CD006C6864 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EE90B5D914A394CD006C6864 /* SLCanvas-Prefix.pch */ = {isa = PBXFileReference; path = "SLCanvas-Prefix.pch"; sourceTree = "<group>"; };
+		EE90B5DA14A394CD006C6864 /* SLCanvas.h */ = {isa = PBXFileReference; path = SLCanvas.h; sourceTree = "<group>"; };
+		EE90B5DB14A394CD006C6864 /* SLCanvas.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLCanvas.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE90B5CF14A394CD006C6864 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE90B5D614A394CD006C6864 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE90B5C714A394CD006C6864 = {
+			isa = PBXGroup;
+			children = (
+				EE90B5D714A394CD006C6864 /* SLCanvas */,
+				EE90B5D414A394CD006C6864 /* Frameworks */,
+				EE90B5D314A394CD006C6864 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE90B5D314A394CD006C6864 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE90B5D214A394CD006C6864 /* libSLCanvas.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE90B5D414A394CD006C6864 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE90B5D514A394CD006C6864 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE90B5D714A394CD006C6864 /* SLCanvas */ = {
+			isa = PBXGroup;
+			children = (
+				EE90B5DA14A394CD006C6864 /* SLCanvas.h */,
+				EE90B5DB14A394CD006C6864 /* SLCanvas.m */,
+				EE90B5D814A394CD006C6864 /* Supporting Files */,
+			);
+			path = SLCanvas;
+			sourceTree = "<group>";
+		};
+		EE90B5D814A394CD006C6864 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE90B5D914A394CD006C6864 /* SLCanvas-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EE90B5D014A394CD006C6864 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		EE90B5D114A394CD006C6864 /* SLCanvas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE90B5DF14A394CD006C6864 /* Build configuration list for PBXNativeTarget "SLCanvas" */;
+			buildPhases = (
+				EE90B5CE14A394CD006C6864 /* Sources */,
+				EE90B5CF14A394CD006C6864 /* Frameworks */,
+				EE90B5D014A394CD006C6864 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SLCanvas;
+			productName = SLCanvas;
+			productReference = EE90B5D214A394CD006C6864 /* libSLCanvas.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE90B5C914A394CD006C6864 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = EE90B5CC14A394CD006C6864 /* Build configuration list for PBXProject "SLCanvas" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EE90B5C714A394CD006C6864;
+			productRefGroup = EE90B5D314A394CD006C6864 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE90B5D114A394CD006C6864 /* SLCanvas */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE90B5CE14A394CD006C6864 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE90B5DC14A394CD006C6864 /* SLCanvas.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EE90B5DD14A394CD006C6864 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EE90B5DE14A394CD006C6864 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE90B5E014A394CD006C6864 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SLCanvas.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SLCanvas/SLCanvas-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EE90B5E114A394CD006C6864 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SLCanvas.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SLCanvas/SLCanvas-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE90B5CC14A394CD006C6864 /* Build configuration list for PBXProject "SLCanvas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE90B5DD14A394CD006C6864 /* Debug */,
+				EE90B5DE14A394CD006C6864 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE90B5DF14A394CD006C6864 /* Build configuration list for PBXNativeTarget "SLCanvas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE90B5E014A394CD006C6864 /* Debug */,
+				EE90B5E114A394CD006C6864 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE90B5C914A394CD006C6864 /* Project object */;
+}

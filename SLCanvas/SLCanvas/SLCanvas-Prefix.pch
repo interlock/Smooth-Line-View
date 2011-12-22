@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'SLCanvas' target in the 'SLCanvas' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
