@@ -7,16 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SLCanvas.h"
+
 
 @interface Smooth_Line_ViewViewController : UIViewController {
-    @private
-    CGPoint lastPoint;
-	BOOL mouseSwiped;	
-	int mouseMoved;
-    UIImageView *imageView;
-    NSMutableArray *pointsArray;
+    SLCanvas *canvas;
 }
-@property (nonatomic,retain) UIImageView *imageView;
--(IBAction)toggleDrawMethod:(id)sender;
+@property (nonatomic,retain) SLCanvas *canvas;
 -(IBAction)clear:(id)sender;
 @end

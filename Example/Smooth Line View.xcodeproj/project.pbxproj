@@ -300,14 +300,14 @@
 		6B93BE8C13F3374200DFAB23 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Levi Nunnink (57WGH9SBKB)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: James Sapara (TFA5Z7QQ78)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: James Sapara (TFA5Z7QQ78)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Smooth Line View/Smooth Line View-Prefix.pch";
 				INFOPLIST_FILE = "Smooth Line View/Smooth Line View-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8B142C7E-87C8-4883-BDEB-3FEE9E77AD18";
+				PROVISIONING_PROFILE = "CCC3C3A4-04F2-4417-8FEA-72AAA2904F6B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CCC3C3A4-04F2-4417-8FEA-72AAA2904F6B";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -342,6 +342,7 @@
 				6B93BE8D13F3374200DFAB23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
