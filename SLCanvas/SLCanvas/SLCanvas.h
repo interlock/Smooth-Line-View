@@ -15,11 +15,18 @@
  */
 
 @interface SLCanvas : UIImageView {
+    @private
     BOOL mouseSwiped;
     CGPoint lastPoint;
 }
 
+/**
+ Store touch event points tracked
+ */
 @property (nonatomic,retain) NSMutableArray *pointsArray;
+/**
+ Priority ordered array of instance which implement <SLDrawProtocol>
+ */
 @property (nonatomic,retain) NSArray *drawArray;
 
 @end
