@@ -7,7 +7,7 @@
 //
 
 #import "SLDrawSpline.h"
-#import "CatmullRomSpline.h"
+#import "spline/CatmullRomSpline.h"
 #include <math.h>
 #include <stdio.h>
 

@@ -16,13 +16,7 @@
 		6B93BE8213F3374200DFAB23 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B93BE8013F3374200DFAB23 /* MainWindow.xib */; };
 		6B93BE8513F3374200DFAB23 /* Smooth_Line_ViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B93BE8413F3374200DFAB23 /* Smooth_Line_ViewViewController.m */; };
 		6B93BE8813F3374200DFAB23 /* Smooth_Line_ViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B93BE8613F3374200DFAB23 /* Smooth_Line_ViewViewController.xib */; };
-		6B93BEA113F337B000DFAB23 /* BezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B93BE9313F337B000DFAB23 /* BezierCurve.m */; };
-		6B93BEA213F337B000DFAB23 /* CatmullRomSpline.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B93BE9513F337B000DFAB23 /* CatmullRomSpline.m */; };
-		6B93BEA313F337B000DFAB23 /* CubicBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B93BE9813F337B000DFAB23 /* CubicBezierCurve.m */; };
-		6B93BEA413F337B000DFAB23 /* LinearBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B93BE9A13F337B000DFAB23 /* LinearBezierCurve.m */; };
-		6B93BEA513F337B000DFAB23 /* NSArray_PointArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B93BE9C13F337B000DFAB23 /* NSArray_PointArray.m */; };
-		6B93BEA613F337B000DFAB23 /* QuadraticBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B93BE9E13F337B000DFAB23 /* QuadraticBezierCurve.m */; };
-		6B93BEA713F337B000DFAB23 /* Spline.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B93BEA013F337B000DFAB23 /* Spline.m */; };
+		EE90B61914A39E76006C6864 /* libSLCanvas.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE90B61814A39E76006C6864 /* libSLCanvas.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,21 +34,7 @@
 		6B93BE8313F3374200DFAB23 /* Smooth_Line_ViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Smooth_Line_ViewViewController.h; sourceTree = "<group>"; };
 		6B93BE8413F3374200DFAB23 /* Smooth_Line_ViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Smooth_Line_ViewViewController.m; sourceTree = "<group>"; };
 		6B93BE8713F3374200DFAB23 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Smooth_Line_ViewViewController.xib; sourceTree = "<group>"; };
-		6B93BE9213F337B000DFAB23 /* BezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierCurve.h; sourceTree = "<group>"; };
-		6B93BE9313F337B000DFAB23 /* BezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierCurve.m; sourceTree = "<group>"; };
-		6B93BE9413F337B000DFAB23 /* CatmullRomSpline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatmullRomSpline.h; sourceTree = "<group>"; };
-		6B93BE9513F337B000DFAB23 /* CatmullRomSpline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatmullRomSpline.m; sourceTree = "<group>"; };
-		6B93BE9613F337B000DFAB23 /* CGPointArithmetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPointArithmetic.h; sourceTree = "<group>"; };
-		6B93BE9713F337B000DFAB23 /* CubicBezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubicBezierCurve.h; sourceTree = "<group>"; };
-		6B93BE9813F337B000DFAB23 /* CubicBezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubicBezierCurve.m; sourceTree = "<group>"; };
-		6B93BE9913F337B000DFAB23 /* LinearBezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearBezierCurve.h; sourceTree = "<group>"; };
-		6B93BE9A13F337B000DFAB23 /* LinearBezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinearBezierCurve.m; sourceTree = "<group>"; };
-		6B93BE9B13F337B000DFAB23 /* NSArray_PointArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArray_PointArray.h; sourceTree = "<group>"; };
-		6B93BE9C13F337B000DFAB23 /* NSArray_PointArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_PointArray.m; sourceTree = "<group>"; };
-		6B93BE9D13F337B000DFAB23 /* QuadraticBezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticBezierCurve.h; sourceTree = "<group>"; };
-		6B93BE9E13F337B000DFAB23 /* QuadraticBezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticBezierCurve.m; sourceTree = "<group>"; };
-		6B93BE9F13F337B000DFAB23 /* Spline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spline.h; sourceTree = "<group>"; };
-		6B93BEA013F337B000DFAB23 /* Spline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spline.m; sourceTree = "<group>"; };
+		EE90B61814A39E76006C6864 /* libSLCanvas.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSLCanvas.a; path = "../SLCanvas/build/Release-iphoneos/libSLCanvas.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE90B61914A39E76006C6864 /* libSLCanvas.a in Frameworks */,
 				6B93BE6F13F3374200DFAB23 /* UIKit.framework in Frameworks */,
 				6B93BE7113F3374200DFAB23 /* Foundation.framework in Frameworks */,
 				6B93BE7313F3374200DFAB23 /* CoreGraphics.framework in Frameworks */,
@@ -91,7 +72,7 @@
 		6B93BE6D13F3374200DFAB23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6B93BE9113F337B000DFAB23 /* spline */,
+				EE90B61814A39E76006C6864 /* libSLCanvas.a */,
 				6B93BE6E13F3374200DFAB23 /* UIKit.framework */,
 				6B93BE7013F3374200DFAB23 /* Foundation.framework */,
 				6B93BE7213F3374200DFAB23 /* CoreGraphics.framework */,
@@ -122,28 +103,6 @@
 				6B93BE7C13F3374200DFAB23 /* Smooth Line View-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		6B93BE9113F337B000DFAB23 /* spline */ = {
-			isa = PBXGroup;
-			children = (
-				6B93BE9213F337B000DFAB23 /* BezierCurve.h */,
-				6B93BE9313F337B000DFAB23 /* BezierCurve.m */,
-				6B93BE9413F337B000DFAB23 /* CatmullRomSpline.h */,
-				6B93BE9513F337B000DFAB23 /* CatmullRomSpline.m */,
-				6B93BE9613F337B000DFAB23 /* CGPointArithmetic.h */,
-				6B93BE9713F337B000DFAB23 /* CubicBezierCurve.h */,
-				6B93BE9813F337B000DFAB23 /* CubicBezierCurve.m */,
-				6B93BE9913F337B000DFAB23 /* LinearBezierCurve.h */,
-				6B93BE9A13F337B000DFAB23 /* LinearBezierCurve.m */,
-				6B93BE9B13F337B000DFAB23 /* NSArray_PointArray.h */,
-				6B93BE9C13F337B000DFAB23 /* NSArray_PointArray.m */,
-				6B93BE9D13F337B000DFAB23 /* QuadraticBezierCurve.h */,
-				6B93BE9E13F337B000DFAB23 /* QuadraticBezierCurve.m */,
-				6B93BE9F13F337B000DFAB23 /* Spline.h */,
-				6B93BEA013F337B000DFAB23 /* Spline.m */,
-			);
-			path = spline;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,13 +171,6 @@
 				6B93BE7B13F3374200DFAB23 /* main.m in Sources */,
 				6B93BE7F13F3374200DFAB23 /* Smooth_Line_ViewAppDelegate.m in Sources */,
 				6B93BE8513F3374200DFAB23 /* Smooth_Line_ViewViewController.m in Sources */,
-				6B93BEA113F337B000DFAB23 /* BezierCurve.m in Sources */,
-				6B93BEA213F337B000DFAB23 /* CatmullRomSpline.m in Sources */,
-				6B93BEA313F337B000DFAB23 /* CubicBezierCurve.m in Sources */,
-				6B93BEA413F337B000DFAB23 /* LinearBezierCurve.m in Sources */,
-				6B93BEA513F337B000DFAB23 /* NSArray_PointArray.m in Sources */,
-				6B93BEA613F337B000DFAB23 /* QuadraticBezierCurve.m in Sources */,
-				6B93BEA713F337B000DFAB23 /* Spline.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +208,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -272,8 +224,13 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
+				USER_HEADER_SEARCH_PATHS = "$(BUILD_PRODUCTS_DIR)";
 			};
 			name = Debug;
 		};
@@ -281,7 +238,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -291,8 +248,13 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
+				USER_HEADER_SEARCH_PATHS = "$(BUILD_PRODUCTS_DIR)";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -300,14 +262,14 @@
 		6B93BE8C13F3374200DFAB23 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: James Sapara (TFA5Z7QQ78)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: James Sapara (TFA5Z7QQ78)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Smooth Line View/Smooth Line View-Prefix.pch";
 				INFOPLIST_FILE = "Smooth Line View/Smooth Line View-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "CCC3C3A4-04F2-4417-8FEA-72AAA2904F6B";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CCC3C3A4-04F2-4417-8FEA-72AAA2904F6B";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

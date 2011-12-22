@@ -6,17 +6,137 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		EEEDC52614A3A7620051AF13 /* SLCanvas-universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = EEEDC52714A3A7620051AF13 /* Build configuration list for PBXAggregateTarget "SLCanvas-universal" */;
+			buildPhases = (
+				EEEDC52A14A3A7710051AF13 /* ShellScript */,
+			);
+			dependencies = (
+				EEEDC52E14A3A7C40051AF13 /* PBXTargetDependency */,
+				EEEDC52C14A3A7BD0051AF13 /* PBXTargetDependency */,
+			);
+			name = "SLCanvas-universal";
+			productName = "SLCanvas-universal";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		EE90B5D614A394CD006C6864 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE90B5D514A394CD006C6864 /* Foundation.framework */; };
 		EE90B5DC14A394CD006C6864 /* SLCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = EE90B5DB14A394CD006C6864 /* SLCanvas.m */; };
+		EE90B5EB14A39692006C6864 /* SLDrawBezier.h in Headers */ = {isa = PBXBuildFile; fileRef = EE90B5E614A39692006C6864 /* SLDrawBezier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE90B5EC14A39692006C6864 /* SLDrawBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = EE90B5E714A39692006C6864 /* SLDrawBezier.m */; };
+		EE90B5ED14A39692006C6864 /* SLDrawProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = EE90B5E814A39692006C6864 /* SLDrawProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE90B5EE14A39692006C6864 /* SLDrawSpline.h in Headers */ = {isa = PBXBuildFile; fileRef = EE90B5E914A39692006C6864 /* SLDrawSpline.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE90B5EF14A39692006C6864 /* SLDrawSpline.m in Sources */ = {isa = PBXBuildFile; fileRef = EE90B5EA14A39692006C6864 /* SLDrawSpline.m */; };
+		EE90B5FB14A3990B006C6864 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE90B5FA14A3990B006C6864 /* UIKit.framework */; };
+		EE90B5FC14A3997A006C6864 /* SLCanvas.h in Headers */ = {isa = PBXBuildFile; fileRef = EE90B5DA14A394CD006C6864 /* SLCanvas.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE96DDB414A3B395005D1205 /* BezierCurve.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDA514A3B395005D1205 /* BezierCurve.h */; };
+		EE96DDB514A3B395005D1205 /* BezierCurve.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDA514A3B395005D1205 /* BezierCurve.h */; };
+		EE96DDB614A3B395005D1205 /* BezierCurve.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDA514A3B395005D1205 /* BezierCurve.h */; };
+		EE96DDB714A3B395005D1205 /* BezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96DDA614A3B395005D1205 /* BezierCurve.m */; };
+		EE96DDB814A3B395005D1205 /* BezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96DDA614A3B395005D1205 /* BezierCurve.m */; };
+		EE96DDB914A3B395005D1205 /* BezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96DDA614A3B395005D1205 /* BezierCurve.m */; };
+		EE96DDBA14A3B395005D1205 /* CatmullRomSpline.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDA714A3B395005D1205 /* CatmullRomSpline.h */; };
+		EE96DDBB14A3B395005D1205 /* CatmullRomSpline.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDA714A3B395005D1205 /* CatmullRomSpline.h */; };
+		EE96DDBC14A3B395005D1205 /* CatmullRomSpline.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDA714A3B395005D1205 /* CatmullRomSpline.h */; };
+		EE96DDBD14A3B395005D1205 /* CatmullRomSpline.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96DDA814A3B395005D1205 /* CatmullRomSpline.m */; };
+		EE96DDBE14A3B395005D1205 /* CatmullRomSpline.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96DDA814A3B395005D1205 /* CatmullRomSpline.m */; };
+		EE96DDBF14A3B395005D1205 /* CatmullRomSpline.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96DDA814A3B395005D1205 /* CatmullRomSpline.m */; };
+		EE96DDC014A3B395005D1205 /* CGPointArithmetic.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDA914A3B395005D1205 /* CGPointArithmetic.h */; };
+		EE96DDC114A3B395005D1205 /* CGPointArithmetic.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDA914A3B395005D1205 /* CGPointArithmetic.h */; };
+		EE96DDC214A3B395005D1205 /* CGPointArithmetic.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDA914A3B395005D1205 /* CGPointArithmetic.h */; };
+		EE96DDC314A3B395005D1205 /* CubicBezierCurve.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDAA14A3B395005D1205 /* CubicBezierCurve.h */; };
+		EE96DDC414A3B395005D1205 /* CubicBezierCurve.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDAA14A3B395005D1205 /* CubicBezierCurve.h */; };
+		EE96DDC514A3B395005D1205 /* CubicBezierCurve.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDAA14A3B395005D1205 /* CubicBezierCurve.h */; };
+		EE96DDC614A3B395005D1205 /* CubicBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96DDAB14A3B395005D1205 /* CubicBezierCurve.m */; };
+		EE96DDC714A3B395005D1205 /* CubicBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96DDAB14A3B395005D1205 /* CubicBezierCurve.m */; };
+		EE96DDC814A3B395005D1205 /* CubicBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96DDAB14A3B395005D1205 /* CubicBezierCurve.m */; };
+		EE96DDC914A3B395005D1205 /* LinearBezierCurve.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDAC14A3B395005D1205 /* LinearBezierCurve.h */; };
+		EE96DDCA14A3B395005D1205 /* LinearBezierCurve.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDAC14A3B395005D1205 /* LinearBezierCurve.h */; };
+		EE96DDCB14A3B395005D1205 /* LinearBezierCurve.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDAC14A3B395005D1205 /* LinearBezierCurve.h */; };
+		EE96DDCC14A3B395005D1205 /* LinearBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96DDAD14A3B395005D1205 /* LinearBezierCurve.m */; };
+		EE96DDCD14A3B395005D1205 /* LinearBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96DDAD14A3B395005D1205 /* LinearBezierCurve.m */; };
+		EE96DDCE14A3B395005D1205 /* LinearBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96DDAD14A3B395005D1205 /* LinearBezierCurve.m */; };
+		EE96DDCF14A3B395005D1205 /* NSArray_PointArray.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDAE14A3B395005D1205 /* NSArray_PointArray.h */; };
+		EE96DDD014A3B395005D1205 /* NSArray_PointArray.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDAE14A3B395005D1205 /* NSArray_PointArray.h */; };
+		EE96DDD114A3B395005D1205 /* NSArray_PointArray.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDAE14A3B395005D1205 /* NSArray_PointArray.h */; };
+		EE96DDD214A3B395005D1205 /* NSArray_PointArray.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96DDAF14A3B395005D1205 /* NSArray_PointArray.m */; };
+		EE96DDD314A3B395005D1205 /* NSArray_PointArray.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96DDAF14A3B395005D1205 /* NSArray_PointArray.m */; };
+		EE96DDD414A3B395005D1205 /* NSArray_PointArray.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96DDAF14A3B395005D1205 /* NSArray_PointArray.m */; };
+		EE96DDD514A3B395005D1205 /* QuadraticBezierCurve.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDB014A3B395005D1205 /* QuadraticBezierCurve.h */; };
+		EE96DDD614A3B395005D1205 /* QuadraticBezierCurve.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDB014A3B395005D1205 /* QuadraticBezierCurve.h */; };
+		EE96DDD714A3B395005D1205 /* QuadraticBezierCurve.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDB014A3B395005D1205 /* QuadraticBezierCurve.h */; };
+		EE96DDD814A3B395005D1205 /* QuadraticBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96DDB114A3B395005D1205 /* QuadraticBezierCurve.m */; };
+		EE96DDD914A3B395005D1205 /* QuadraticBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96DDB114A3B395005D1205 /* QuadraticBezierCurve.m */; };
+		EE96DDDA14A3B395005D1205 /* QuadraticBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96DDB114A3B395005D1205 /* QuadraticBezierCurve.m */; };
+		EE96DDDB14A3B395005D1205 /* Spline.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDB214A3B395005D1205 /* Spline.h */; };
+		EE96DDDC14A3B395005D1205 /* Spline.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDB214A3B395005D1205 /* Spline.h */; };
+		EE96DDDD14A3B395005D1205 /* Spline.h in Headers */ = {isa = PBXBuildFile; fileRef = EE96DDB214A3B395005D1205 /* Spline.h */; };
+		EE96DDDE14A3B395005D1205 /* Spline.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96DDB314A3B395005D1205 /* Spline.m */; };
+		EE96DDDF14A3B395005D1205 /* Spline.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96DDB314A3B395005D1205 /* Spline.m */; };
+		EE96DDE014A3B395005D1205 /* Spline.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96DDB314A3B395005D1205 /* Spline.m */; };
+		EEEDC50214A3A4AD0051AF13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE90B5D514A394CD006C6864 /* Foundation.framework */; };
+		EEEDC51214A3A4BC0051AF13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE90B5D514A394CD006C6864 /* Foundation.framework */; };
+		EEEDC51C14A3A4EC0051AF13 /* SLDrawBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = EE90B5E714A39692006C6864 /* SLDrawBezier.m */; };
+		EEEDC51D14A3A4EC0051AF13 /* SLDrawSpline.m in Sources */ = {isa = PBXBuildFile; fileRef = EE90B5EA14A39692006C6864 /* SLDrawSpline.m */; };
+		EEEDC51E14A3A4EC0051AF13 /* SLCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = EE90B5DB14A394CD006C6864 /* SLCanvas.m */; };
+		EEEDC51F14A3A50F0051AF13 /* SLDrawBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = EE90B5E714A39692006C6864 /* SLDrawBezier.m */; };
+		EEEDC52014A3A50F0051AF13 /* SLDrawSpline.m in Sources */ = {isa = PBXBuildFile; fileRef = EE90B5EA14A39692006C6864 /* SLDrawSpline.m */; };
+		EEEDC52114A3A50F0051AF13 /* SLCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = EE90B5DB14A394CD006C6864 /* SLCanvas.m */; };
+		EEEDC52214A3A5250051AF13 /* SLDrawBezier.h in Headers */ = {isa = PBXBuildFile; fileRef = EE90B5E614A39692006C6864 /* SLDrawBezier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEEDC52314A3A5250051AF13 /* SLDrawProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = EE90B5E814A39692006C6864 /* SLDrawProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEEDC52414A3A5250051AF13 /* SLDrawSpline.h in Headers */ = {isa = PBXBuildFile; fileRef = EE90B5E914A39692006C6864 /* SLDrawSpline.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEEDC52514A3A5250051AF13 /* SLCanvas.h in Headers */ = {isa = PBXBuildFile; fileRef = EE90B5DA14A394CD006C6864 /* SLCanvas.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EEEDC52B14A3A7BD0051AF13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE90B5C914A394CD006C6864 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEEDC50014A3A4AD0051AF13;
+			remoteInfo = "SLCanvas-iossimulator";
+		};
+		EEEDC52D14A3A7C40051AF13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE90B5C914A394CD006C6864 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEEDC51014A3A4BC0051AF13;
+			remoteInfo = "SLCanvas-iphone";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		EE90B5D214A394CD006C6864 /* libSLCanvas.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSLCanvas.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE90B5D514A394CD006C6864 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		EE90B5D914A394CD006C6864 /* SLCanvas-Prefix.pch */ = {isa = PBXFileReference; path = "SLCanvas-Prefix.pch"; sourceTree = "<group>"; };
-		EE90B5DA14A394CD006C6864 /* SLCanvas.h */ = {isa = PBXFileReference; path = SLCanvas.h; sourceTree = "<group>"; };
+		EE90B5D914A394CD006C6864 /* SLCanvas-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SLCanvas-Prefix.pch"; sourceTree = "<group>"; };
+		EE90B5DA14A394CD006C6864 /* SLCanvas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLCanvas.h; sourceTree = "<group>"; };
 		EE90B5DB14A394CD006C6864 /* SLCanvas.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLCanvas.m; sourceTree = "<group>"; };
+		EE90B5E614A39692006C6864 /* SLDrawBezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDrawBezier.h; sourceTree = "<group>"; };
+		EE90B5E714A39692006C6864 /* SLDrawBezier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLDrawBezier.m; sourceTree = "<group>"; };
+		EE90B5E814A39692006C6864 /* SLDrawProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDrawProtocol.h; sourceTree = "<group>"; };
+		EE90B5E914A39692006C6864 /* SLDrawSpline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDrawSpline.h; sourceTree = "<group>"; };
+		EE90B5EA14A39692006C6864 /* SLDrawSpline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLDrawSpline.m; sourceTree = "<group>"; };
+		EE90B5FA14A3990B006C6864 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EE96DDA514A3B395005D1205 /* BezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierCurve.h; sourceTree = "<group>"; };
+		EE96DDA614A3B395005D1205 /* BezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierCurve.m; sourceTree = "<group>"; };
+		EE96DDA714A3B395005D1205 /* CatmullRomSpline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatmullRomSpline.h; sourceTree = "<group>"; };
+		EE96DDA814A3B395005D1205 /* CatmullRomSpline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatmullRomSpline.m; sourceTree = "<group>"; };
+		EE96DDA914A3B395005D1205 /* CGPointArithmetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPointArithmetic.h; sourceTree = "<group>"; };
+		EE96DDAA14A3B395005D1205 /* CubicBezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubicBezierCurve.h; sourceTree = "<group>"; };
+		EE96DDAB14A3B395005D1205 /* CubicBezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubicBezierCurve.m; sourceTree = "<group>"; };
+		EE96DDAC14A3B395005D1205 /* LinearBezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearBezierCurve.h; sourceTree = "<group>"; };
+		EE96DDAD14A3B395005D1205 /* LinearBezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinearBezierCurve.m; sourceTree = "<group>"; };
+		EE96DDAE14A3B395005D1205 /* NSArray_PointArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArray_PointArray.h; sourceTree = "<group>"; };
+		EE96DDAF14A3B395005D1205 /* NSArray_PointArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_PointArray.m; sourceTree = "<group>"; };
+		EE96DDB014A3B395005D1205 /* QuadraticBezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticBezierCurve.h; sourceTree = "<group>"; };
+		EE96DDB114A3B395005D1205 /* QuadraticBezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticBezierCurve.m; sourceTree = "<group>"; };
+		EE96DDB214A3B395005D1205 /* Spline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spline.h; sourceTree = "<group>"; };
+		EE96DDB314A3B395005D1205 /* Spline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spline.m; sourceTree = "<group>"; };
+		EEEDC50114A3A4AD0051AF13 /* libSLCanvas-iossimulator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libSLCanvas-iossimulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEEDC51114A3A4BC0051AF13 /* libSLCanvas-iphone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libSLCanvas-iphone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,7 +144,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE90B5FB14A3990B006C6864 /* UIKit.framework in Frameworks */,
 				EE90B5D614A394CD006C6864 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEEDC4FE14A3A4AD0051AF13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEEDC50214A3A4AD0051AF13 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEEDC50E14A3A4BC0051AF13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEEDC51214A3A4BC0051AF13 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				EE90B5D214A394CD006C6864 /* libSLCanvas.a */,
+				EEEDC50114A3A4AD0051AF13 /* libSLCanvas-iossimulator.a */,
+				EEEDC51114A3A4BC0051AF13 /* libSLCanvas-iphone.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,6 +190,7 @@
 		EE90B5D414A394CD006C6864 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE90B5FA14A3990B006C6864 /* UIKit.framework */,
 				EE90B5D514A394CD006C6864 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -59,6 +199,12 @@
 		EE90B5D714A394CD006C6864 /* SLCanvas */ = {
 			isa = PBXGroup;
 			children = (
+				EE96DDA414A3B379005D1205 /* spline */,
+				EE90B5E614A39692006C6864 /* SLDrawBezier.h */,
+				EE90B5E714A39692006C6864 /* SLDrawBezier.m */,
+				EE90B5E814A39692006C6864 /* SLDrawProtocol.h */,
+				EE90B5E914A39692006C6864 /* SLDrawSpline.h */,
+				EE90B5EA14A39692006C6864 /* SLDrawSpline.m */,
 				EE90B5DA14A394CD006C6864 /* SLCanvas.h */,
 				EE90B5DB14A394CD006C6864 /* SLCanvas.m */,
 				EE90B5D814A394CD006C6864 /* Supporting Files */,
@@ -74,6 +220,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EE96DDA414A3B379005D1205 /* spline */ = {
+			isa = PBXGroup;
+			children = (
+				EE96DDA514A3B395005D1205 /* BezierCurve.h */,
+				EE96DDA614A3B395005D1205 /* BezierCurve.m */,
+				EE96DDA714A3B395005D1205 /* CatmullRomSpline.h */,
+				EE96DDA814A3B395005D1205 /* CatmullRomSpline.m */,
+				EE96DDA914A3B395005D1205 /* CGPointArithmetic.h */,
+				EE96DDAA14A3B395005D1205 /* CubicBezierCurve.h */,
+				EE96DDAB14A3B395005D1205 /* CubicBezierCurve.m */,
+				EE96DDAC14A3B395005D1205 /* LinearBezierCurve.h */,
+				EE96DDAD14A3B395005D1205 /* LinearBezierCurve.m */,
+				EE96DDAE14A3B395005D1205 /* NSArray_PointArray.h */,
+				EE96DDAF14A3B395005D1205 /* NSArray_PointArray.m */,
+				EE96DDB014A3B395005D1205 /* QuadraticBezierCurve.h */,
+				EE96DDB114A3B395005D1205 /* QuadraticBezierCurve.m */,
+				EE96DDB214A3B395005D1205 /* Spline.h */,
+				EE96DDB314A3B395005D1205 /* Spline.m */,
+			);
+			path = spline;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -81,6 +249,52 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE90B5EB14A39692006C6864 /* SLDrawBezier.h in Headers */,
+				EE90B5FC14A3997A006C6864 /* SLCanvas.h in Headers */,
+				EE90B5ED14A39692006C6864 /* SLDrawProtocol.h in Headers */,
+				EE90B5EE14A39692006C6864 /* SLDrawSpline.h in Headers */,
+				EE96DDB414A3B395005D1205 /* BezierCurve.h in Headers */,
+				EE96DDBA14A3B395005D1205 /* CatmullRomSpline.h in Headers */,
+				EE96DDC014A3B395005D1205 /* CGPointArithmetic.h in Headers */,
+				EE96DDC314A3B395005D1205 /* CubicBezierCurve.h in Headers */,
+				EE96DDC914A3B395005D1205 /* LinearBezierCurve.h in Headers */,
+				EE96DDCF14A3B395005D1205 /* NSArray_PointArray.h in Headers */,
+				EE96DDD514A3B395005D1205 /* QuadraticBezierCurve.h in Headers */,
+				EE96DDDB14A3B395005D1205 /* Spline.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEEDC4FF14A3A4AD0051AF13 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEEDC52214A3A5250051AF13 /* SLDrawBezier.h in Headers */,
+				EEEDC52314A3A5250051AF13 /* SLDrawProtocol.h in Headers */,
+				EEEDC52414A3A5250051AF13 /* SLDrawSpline.h in Headers */,
+				EEEDC52514A3A5250051AF13 /* SLCanvas.h in Headers */,
+				EE96DDB514A3B395005D1205 /* BezierCurve.h in Headers */,
+				EE96DDBB14A3B395005D1205 /* CatmullRomSpline.h in Headers */,
+				EE96DDC114A3B395005D1205 /* CGPointArithmetic.h in Headers */,
+				EE96DDC414A3B395005D1205 /* CubicBezierCurve.h in Headers */,
+				EE96DDCA14A3B395005D1205 /* LinearBezierCurve.h in Headers */,
+				EE96DDD014A3B395005D1205 /* NSArray_PointArray.h in Headers */,
+				EE96DDD614A3B395005D1205 /* QuadraticBezierCurve.h in Headers */,
+				EE96DDDC14A3B395005D1205 /* Spline.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEEDC50F14A3A4BC0051AF13 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE96DDB614A3B395005D1205 /* BezierCurve.h in Headers */,
+				EE96DDBC14A3B395005D1205 /* CatmullRomSpline.h in Headers */,
+				EE96DDC214A3B395005D1205 /* CGPointArithmetic.h in Headers */,
+				EE96DDC514A3B395005D1205 /* CubicBezierCurve.h in Headers */,
+				EE96DDCB14A3B395005D1205 /* LinearBezierCurve.h in Headers */,
+				EE96DDD114A3B395005D1205 /* NSArray_PointArray.h in Headers */,
+				EE96DDD714A3B395005D1205 /* QuadraticBezierCurve.h in Headers */,
+				EE96DDDD14A3B395005D1205 /* Spline.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +318,40 @@
 			productReference = EE90B5D214A394CD006C6864 /* libSLCanvas.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		EEEDC50014A3A4AD0051AF13 /* SLCanvas-iossimulator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEEDC50B14A3A4AD0051AF13 /* Build configuration list for PBXNativeTarget "SLCanvas-iossimulator" */;
+			buildPhases = (
+				EEEDC4FD14A3A4AD0051AF13 /* Sources */,
+				EEEDC4FE14A3A4AD0051AF13 /* Frameworks */,
+				EEEDC4FF14A3A4AD0051AF13 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SLCanvas-iossimulator";
+			productName = "SLCanvas-iossimulator";
+			productReference = EEEDC50114A3A4AD0051AF13 /* libSLCanvas-iossimulator.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EEEDC51014A3A4BC0051AF13 /* SLCanvas-iphone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEEDC51914A3A4BC0051AF13 /* Build configuration list for PBXNativeTarget "SLCanvas-iphone" */;
+			buildPhases = (
+				EEEDC50D14A3A4BC0051AF13 /* Sources */,
+				EEEDC50E14A3A4BC0051AF13 /* Frameworks */,
+				EEEDC50F14A3A4BC0051AF13 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SLCanvas-iphone";
+			productName = "SLCanvas-iphone";
+			productReference = EEEDC51114A3A4BC0051AF13 /* libSLCanvas-iphone.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -125,9 +373,28 @@
 			projectRoot = "";
 			targets = (
 				EE90B5D114A394CD006C6864 /* SLCanvas */,
+				EEEDC50014A3A4AD0051AF13 /* SLCanvas-iossimulator */,
+				EEEDC51014A3A4BC0051AF13 /* SLCanvas-iphone */,
+				EEEDC52614A3A7620051AF13 /* SLCanvas-universal */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EEEDC52A14A3A7710051AF13 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rm -rf ${BUILT_PRODUCTS_DIR}/libSLCanvas.a\n\nlipo -create \"${BUILT_PRODUCTS_DIR}/../Release-iphonesimulator/libSLCanvas-iossimulator.a\" \\\n\"${BUILT_PRODUCTS_DIR}/libSLCanvas-iphone.a\" -output \\\n\"${BUILT_PRODUCTS_DIR}/libSLCanvas.a\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EE90B5CE14A394CD006C6864 /* Sources */ = {
@@ -135,10 +402,66 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE90B5DC14A394CD006C6864 /* SLCanvas.m in Sources */,
+				EE90B5EC14A39692006C6864 /* SLDrawBezier.m in Sources */,
+				EE90B5EF14A39692006C6864 /* SLDrawSpline.m in Sources */,
+				EE96DDB714A3B395005D1205 /* BezierCurve.m in Sources */,
+				EE96DDBD14A3B395005D1205 /* CatmullRomSpline.m in Sources */,
+				EE96DDC614A3B395005D1205 /* CubicBezierCurve.m in Sources */,
+				EE96DDCC14A3B395005D1205 /* LinearBezierCurve.m in Sources */,
+				EE96DDD214A3B395005D1205 /* NSArray_PointArray.m in Sources */,
+				EE96DDD814A3B395005D1205 /* QuadraticBezierCurve.m in Sources */,
+				EE96DDDE14A3B395005D1205 /* Spline.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEEDC4FD14A3A4AD0051AF13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEEDC51C14A3A4EC0051AF13 /* SLDrawBezier.m in Sources */,
+				EEEDC51D14A3A4EC0051AF13 /* SLDrawSpline.m in Sources */,
+				EEEDC51E14A3A4EC0051AF13 /* SLCanvas.m in Sources */,
+				EE96DDB814A3B395005D1205 /* BezierCurve.m in Sources */,
+				EE96DDBE14A3B395005D1205 /* CatmullRomSpline.m in Sources */,
+				EE96DDC714A3B395005D1205 /* CubicBezierCurve.m in Sources */,
+				EE96DDCD14A3B395005D1205 /* LinearBezierCurve.m in Sources */,
+				EE96DDD314A3B395005D1205 /* NSArray_PointArray.m in Sources */,
+				EE96DDD914A3B395005D1205 /* QuadraticBezierCurve.m in Sources */,
+				EE96DDDF14A3B395005D1205 /* Spline.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEEDC50D14A3A4BC0051AF13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEEDC51F14A3A50F0051AF13 /* SLDrawBezier.m in Sources */,
+				EEEDC52014A3A50F0051AF13 /* SLDrawSpline.m in Sources */,
+				EEEDC52114A3A50F0051AF13 /* SLCanvas.m in Sources */,
+				EE96DDB914A3B395005D1205 /* BezierCurve.m in Sources */,
+				EE96DDBF14A3B395005D1205 /* CatmullRomSpline.m in Sources */,
+				EE96DDC814A3B395005D1205 /* CubicBezierCurve.m in Sources */,
+				EE96DDCE14A3B395005D1205 /* LinearBezierCurve.m in Sources */,
+				EE96DDD414A3B395005D1205 /* NSArray_PointArray.m in Sources */,
+				EE96DDDA14A3B395005D1205 /* QuadraticBezierCurve.m in Sources */,
+				EE96DDE014A3B395005D1205 /* Spline.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EEEDC52C14A3A7BD0051AF13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEEDC50014A3A4AD0051AF13 /* SLCanvas-iossimulator */;
+			targetProxy = EEEDC52B14A3A7BD0051AF13 /* PBXContainerItemProxy */;
+		};
+		EEEDC52E14A3A7C40051AF13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEEDC51014A3A4BC0051AF13 /* SLCanvas-iphone */;
+			targetProxy = EEEDC52D14A3A7C40051AF13 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		EE90B5DD14A394CD006C6864 /* Debug */ = {
@@ -150,6 +473,8 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SLCanvas/SLCanvas-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -159,7 +484,8 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PUBLIC_HEADERS_FOLDER_PATH = include;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -171,11 +497,14 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SLCanvas/SLCanvas-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PUBLIC_HEADERS_FOLDER_PATH = include;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -205,6 +534,76 @@
 			};
 			name = Release;
 		};
+		EEEDC50914A3A4AD0051AF13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SLCanvas_iossimulator.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EEEDC50A14A3A4AD0051AF13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SLCanvas_iossimulator.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EEEDC51A14A3A4BC0051AF13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv6,
+				);
+				DSTROOT = /tmp/SLCanvas_iphone.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EEEDC51B14A3A4BC0051AF13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv6,
+				);
+				DSTROOT = /tmp/SLCanvas_iphone.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EEEDC52814A3A7620051AF13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EEEDC52914A3A7620051AF13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -224,6 +623,34 @@
 				EE90B5E114A394CD006C6864 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEEDC50B14A3A4AD0051AF13 /* Build configuration list for PBXNativeTarget "SLCanvas-iossimulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEEDC50914A3A4AD0051AF13 /* Debug */,
+				EEEDC50A14A3A4AD0051AF13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEEDC51914A3A4BC0051AF13 /* Build configuration list for PBXNativeTarget "SLCanvas-iphone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEEDC51A14A3A4BC0051AF13 /* Debug */,
+				EEEDC51B14A3A4BC0051AF13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEEDC52714A3A7620051AF13 /* Build configuration list for PBXAggregateTarget "SLCanvas-universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEEDC52814A3A7620051AF13 /* Debug */,
+				EEEDC52914A3A7620051AF13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
