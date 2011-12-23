@@ -25,6 +25,7 @@
         self.delegate = nil;
         [self setUserInteractionEnabled:YES];
         self.traceColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1];
+        captureThreshold = 5.0;
     }
     return self;
 }
@@ -37,7 +38,7 @@
 	UITouch *touch = [touches anyObject];
     [self.pointsArray removeAllObjects];
 	lastPoint = [touch locationInView:self];
-	//lastPoint.y -= 20;
+
     [self.pointsArray addObject:[NSValue valueWithCGPoint:lastPoint]];
 }
 
@@ -48,31 +49,36 @@
 	
 	UITouch *touch = [touches anyObject];	
 	CGPoint currentPoint = [touch locationInView:self];
-	//currentPoint.y -= 20;
-	
-	if ( trace ) {
-        UIGraphicsBeginImageContext(self.frame.size);
-        [self.image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-        CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
-        
-        float lineWidth = 5.0;
-        if ( [self.delegate respondsToSelector:@selector(drawingLineWidth:)] ) {
-            lineWidth = [self.delegate drawingLineWidth:self];
+    float distance = sqrtf(
+                           powf(lastPoint.x - currentPoint.x, 2.0f) + 
+                           powf(lastPoint.y - currentPoint.y, 2.0f)
+                    );
+    NSLog(@"Distance: %f", distance);
+    if ( distance >= captureThreshold ) { // TODO refactor this code to be resued between touchMoved and touchesEnded
+        if ( trace ) {
+            UIGraphicsBeginImageContext(self.frame.size);
+            [self.image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+            CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
+            
+            float lineWidth = 5.0;
+            if ( [self.delegate respondsToSelector:@selector(drawingLineWidth:)] ) {
+                lineWidth = [self.delegate drawingLineWidth:self];
+            }
+            CGContextSetLineWidth(UIGraphicsGetCurrentContext(), lineWidth);
+            
+            CGContextSetStrokeColorWithColor(UIGraphicsGetCurrentContext(), [traceColor CGColor]);
+            CGContextBeginPath(UIGraphicsGetCurrentContext());
+            CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
+            CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
+            CGContextStrokePath(UIGraphicsGetCurrentContext());
+            self.image = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
         }
-        CGContextSetLineWidth(UIGraphicsGetCurrentContext(), lineWidth);
         
-        CGContextSetStrokeColorWithColor(UIGraphicsGetCurrentContext(), [traceColor CGColor]);
-        CGContextBeginPath(UIGraphicsGetCurrentContext());
-        CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
-        CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
-        CGContextStrokePath(UIGraphicsGetCurrentContext());
-        self.image = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
+        lastPoint = currentPoint;
+        
+        [self.pointsArray addObject:[NSValue valueWithCGPoint:currentPoint]];
     }
-	
-	lastPoint = currentPoint;
-    
-    [self.pointsArray addObject:[NSValue valueWithCGPoint:currentPoint]];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {

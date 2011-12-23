@@ -33,6 +33,11 @@
     BOOL mouseSwiped;
     BOOL trace;
     CGPoint lastPoint;
+    /**
+     CGPoint distance required to capture the point.
+     Smaller values offer more precision in exchange for more processing to render curves
+     */
+    float captureThreshold; 
     id<SLCanvasProtocol> delegate;
 }
 
