@@ -16,6 +16,7 @@ This view uses two methods of smoothing:
 * Interface for providing your own line drawing renders in the CoreGraphics context
 * Delegate for setting color and width
 * Adjustable capture accuracy, so you can refine the canvas to your applications needs 
+* Integrated NSUndoManager
 
 ### TODO
 
