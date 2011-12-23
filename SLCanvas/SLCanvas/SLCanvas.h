@@ -39,12 +39,21 @@
      */
     float captureThreshold; 
     id<SLCanvasProtocol> delegate;
+    
+    // Undo Related
+    NSUndoManager *undoManager;
 }
 
 /**
- Store touch event points tracked
+ Store current touch event points tracked
  */
 @property (nonatomic,retain) NSMutableArray *pointsArray;
+
+/**
+ Store all points on canvas
+ */
+@property (nonatomic,retain) NSMutableArray *allPointsArray;
+
 /**
  Priority ordered array of instance which implement <SLDrawProtocol>
  */
@@ -53,5 +62,18 @@
 @property (nonatomic,retain) UIColor *traceColor;
 
 @property (nonatomic,retain) id<SLCanvasProtocol> delegate;
+
+@property (nonatomic,retain) NSUndoManager *undoManager;
+
+@property (nonatomic,retain) NSMutableArray *undoArray;// Array of NSPointers to do undo/redo operation with
+
+-(void)undoManagerOp:(NSMutableArray*)points;
+-(void)undoManagerDidUndo:(NSUndoManager*)undoManager;
+-(void)undoManagerDidRedo:(NSUndoManager*)undoManager;
+
+/**
+ Clear the image and undoManager
+ */
+-(void)clear;
 
 @end

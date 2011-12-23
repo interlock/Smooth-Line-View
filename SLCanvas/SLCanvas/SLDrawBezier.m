@@ -21,8 +21,13 @@
         }
         lastPoint = v;
     }
-    return ( 0.5f * ((15 - MIN(15,[points count])) / 15) ) +
-        (0.5f * ( MAX(100,[points count]) / 100));
+    int count = [points count];
+    float avgDistance = distance / count;
+    // TODO fold this code after we are done tweaking it
+    float confidenceA = 0.2f * ((5.0 - fminf(avgDistance, 5.0)) / 5.0); // progressively more weight to average distances between points < 5
+    float confidenceB = ( 0.8f * ( MIN(15,count) / 15)); // progressively more weight for sets with 15 or more points
+    float confidence = (confidenceA + confidenceB);
+    return confidence;
 }
 
 -(CGRect)drawingFrame:(NSArray *)points withinFrame:(CGRect)frame {

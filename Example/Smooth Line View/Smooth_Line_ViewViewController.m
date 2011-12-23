@@ -19,7 +19,19 @@
 #pragma mark - UI Actions
 -(IBAction)clear:(id)sender
 {
-    self.canvas.image = nil;
+    [self.canvas clear];
+}
+
+-(IBAction)undo:(id)sender {
+    if ( [self.canvas.undoManager canUndo] ) {
+        [self.canvas.undoManager undo];
+    }
+}
+
+-(IBAction)redo:(id)sender {
+    if ( [self.canvas.undoManager canRedo] ) {
+        [self.canvas.undoManager redo];
+    }
 }
 
 #pragma mark - SLCanvasProtocol
@@ -44,6 +56,7 @@
                              nil];
     
     [self.view addSubview:self.canvas];
+    [self.view sendSubviewToBack:self.canvas];
     [super viewDidLoad];
 }
 

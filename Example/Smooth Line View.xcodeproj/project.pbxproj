@@ -16,7 +16,7 @@
 		6B93BE8213F3374200DFAB23 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B93BE8013F3374200DFAB23 /* MainWindow.xib */; };
 		6B93BE8513F3374200DFAB23 /* Smooth_Line_ViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B93BE8413F3374200DFAB23 /* Smooth_Line_ViewViewController.m */; };
 		6B93BE8813F3374200DFAB23 /* Smooth_Line_ViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B93BE8613F3374200DFAB23 /* Smooth_Line_ViewViewController.xib */; };
-		EE90B61914A39E76006C6864 /* libSLCanvas.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE90B61814A39E76006C6864 /* libSLCanvas.a */; };
+		EE90B61914A39E76006C6864 /* libSLCanvas.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE90B61814A39E76006C6864 /* libSLCanvas.a */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */

@@ -15,4 +15,6 @@
 }
 @property (nonatomic,retain) SLCanvas *canvas;
 -(IBAction)clear:(id)sender;
+-(IBAction)undo:(id)sender;
+-(IBAction)redo:(id)sender;
 @end

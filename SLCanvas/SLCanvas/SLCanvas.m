@@ -9,16 +9,24 @@
 #import "SLCanvas.h"
 #import "SLDrawProtocol.h"
 
+@interface SLCanvas()  {
+@private
+    
+}
+-(id<SLDrawProtocol>)getBestSLDraw:(NSMutableArray*)points;
+
+@end
 
 @implementation SLCanvas
 
-@synthesize pointsArray, drawArray, traceColor, delegate;
+@synthesize pointsArray, allPointsArray, drawArray, traceColor, delegate, undoManager, undoArray;
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         self.pointsArray = [NSMutableArray array];
+        self.allPointsArray = [NSMutableArray array];
         self.drawArray = [NSArray array];
         mouseSwiped = NO;
         trace = YES;
@@ -26,8 +34,22 @@
         [self setUserInteractionEnabled:YES];
         self.traceColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1];
         captureThreshold = 5.0;
+        
+        self.undoManager = [[NSUndoManager alloc] init];
+        [self.undoManager setLevelsOfUndo:10];
+        NSNotificationCenter *dnc = [NSNotificationCenter defaultCenter];
+        [dnc addObserver:self selector:@selector(undoManagerDidUndo:) name:NSUndoManagerDidUndoChangeNotification object:undoManager];
+        [dnc addObserver:self selector:@selector(undoManagerDidRedo:) name:NSUndoManagerDidRedoChangeNotification object:undoManager];
     }
     return self;
+}
+
+-(void)dealloc {
+    NSNotificationCenter *dnc = [NSNotificationCenter defaultCenter];
+
+    [dnc removeObserver:self];
+    
+    [super dealloc];
 }
 
 #pragma mark - Touch Handling
@@ -53,7 +75,6 @@
                            powf(lastPoint.x - currentPoint.x, 2.0f) + 
                            powf(lastPoint.y - currentPoint.y, 2.0f)
                     );
-    NSLog(@"Distance: %f", distance);
     if ( distance >= captureThreshold ) { // TODO refactor this code to be resued between touchMoved and touchesEnded
         if ( trace ) {
             UIGraphicsBeginImageContext(self.frame.size);
@@ -105,13 +126,25 @@
         UIGraphicsEndImageContext();
     }
     
-    // determine best SLDrawProtocol
+    [self.allPointsArray addObject:[self.pointsArray copy]];
+    [[self.undoManager prepareWithInvocationTarget:self] undoManagerOp:[self.allPointsArray lastObject]];
+    [[self getBestSLDraw:[self.allPointsArray lastObject]] draw:[self.allPointsArray lastObject] onCanvas: self];
+}
+
+-(void)clear {
+    self.image = nil;
+    [self.undoManager removeAllActions];
+}
+
+#pragma mark - Private
+
+-(id<SLDrawProtocol>)getBestSLDraw:(NSMutableArray*)points {
     id<SLDrawProtocol> bestDraw = nil;
     float bestDrawConfidence = -1.0f;
     for (id _drawer in self.drawArray) {
         if ( [[_drawer class] conformsToProtocol:@protocol(SLDrawProtocol)] ) {
             id<SLDrawProtocol> drawer = (id<SLDrawProtocol>)_drawer;
-            float thisDrawerConfidence = [drawer getConfidence:self.pointsArray];
+            float thisDrawerConfidence = [drawer getConfidence:points];
             // This loop will honour order in the array for equal confidences
             if ( thisDrawerConfidence > bestDrawConfidence ) {
                 bestDrawConfidence = thisDrawerConfidence;
@@ -119,18 +152,33 @@
             }
         }
     }
-    
-    [bestDraw draw:self.pointsArray onCanvas:self];
+    return bestDraw;
+}
+
+#pragma mark - NSUndoManager 
+-(void)undoManagerOp:(NSMutableArray*)points {
+    NSLog(@"Undo ### OP ###");
+    self.undoArray = points;
+    [[self.undoManager prepareWithInvocationTarget:self] undoManagerOp:points];
 }
 
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
+-(void)undoManagerDidUndo:(NSUndoManager*)undoManager {
+    NSLog(@"Undo");
+    [self.allPointsArray removeObject:self.undoArray];
+    self.image = nil;
+    for(NSMutableArray *points in self.allPointsArray ) {
+        [[self getBestSLDraw:points] draw:points onCanvas: self];
+    }
 }
-*/
+
+-(void)undoManagerDidRedo:(NSUndoManager*)undoManager {
+    NSLog(@"Redo");
+    [self.allPointsArray addObject:self.undoArray];
+    self.image = nil;
+    for(NSMutableArray *points in self.allPointsArray ) {
+        [[self getBestSLDraw:points] draw:points onCanvas: self];
+    }}
+
 
 @end

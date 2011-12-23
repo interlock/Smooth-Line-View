@@ -40,9 +40,10 @@
         }
         lastPoint = v;
     }
-    
-    return ( 0.8f * ((15 - MIN(15,[points count])) / 15) ) +
-    (0.2f * (MAX(confidenceDistance,(distance/count)) / confidenceDistance));
+
+    float confidence = ( 0.8f * ((15 - MIN(15,count)) / 15) ) + // exceptionally good at low point curves
+    (0.2f * (fmaxf(confidenceDistance,(distance/count)) / confidenceDistance)); // good at well spaced points as well
+    return confidence;
     
 }
 
