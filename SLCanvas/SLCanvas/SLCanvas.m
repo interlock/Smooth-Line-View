@@ -12,7 +12,7 @@
 
 @implementation SLCanvas
 
-@synthesize pointsArray, drawArray;
+@synthesize pointsArray, drawArray, traceColor, delegate;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -21,7 +21,10 @@
         self.pointsArray = [NSMutableArray array];
         self.drawArray = [NSArray array];
         mouseSwiped = NO;
+        trace = YES;
+        self.delegate = nil;
         [self setUserInteractionEnabled:YES];
+        self.traceColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1];
     }
     return self;
 }
@@ -47,18 +50,25 @@
 	CGPoint currentPoint = [touch locationInView:self];
 	//currentPoint.y -= 20;
 	
-	
-	UIGraphicsBeginImageContext(self.frame.size);
-	[self.image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-	CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
-	CGContextSetLineWidth(UIGraphicsGetCurrentContext(), 5.0);
-	CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), 0.0, 0.0, 0.0, 0.1);
-	CGContextBeginPath(UIGraphicsGetCurrentContext());
-	CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
-	CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
-	CGContextStrokePath(UIGraphicsGetCurrentContext());
-	self.image = UIGraphicsGetImageFromCurrentImageContext();
-	UIGraphicsEndImageContext();
+	if ( trace ) {
+        UIGraphicsBeginImageContext(self.frame.size);
+        [self.image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+        CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
+        
+        float lineWidth = 5.0;
+        if ( [self.delegate respondsToSelector:@selector(drawingLineWidth:)] ) {
+            lineWidth = [self.delegate drawingLineWidth:self];
+        }
+        CGContextSetLineWidth(UIGraphicsGetCurrentContext(), lineWidth);
+        
+        CGContextSetStrokeColorWithColor(UIGraphicsGetCurrentContext(), [traceColor CGColor]);
+        CGContextBeginPath(UIGraphicsGetCurrentContext());
+        CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
+        CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
+        CGContextStrokePath(UIGraphicsGetCurrentContext());
+        self.image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+    }
 	
 	lastPoint = currentPoint;
     
@@ -68,17 +78,26 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     [super touchesEnded:touches withEvent:event];
     
-    UIGraphicsBeginImageContext(self.frame.size);
-    [self.image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-    CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
-    CGContextSetLineWidth(UIGraphicsGetCurrentContext(), 5.0);
-    CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), 0.0, 0.0, 0.0, 0.1);
-    CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
-    CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
-    CGContextStrokePath(UIGraphicsGetCurrentContext());
-    CGContextFlush(UIGraphicsGetCurrentContext());
-    self.image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+    if ( trace ) {
+        UIGraphicsBeginImageContext(self.frame.size);
+        [self.image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+        CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
+        
+        float lineWidth = 5.0;
+        if ( [self.delegate respondsToSelector:@selector(drawingLineWidth:)] ) {
+            lineWidth = [self.delegate drawingLineWidth:self];
+        }
+        CGContextSetLineWidth(UIGraphicsGetCurrentContext(), lineWidth);
+        
+        CGContextSetStrokeColorWithColor(UIGraphicsGetCurrentContext(), [traceColor CGColor]);
+        
+        CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
+        CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
+        CGContextStrokePath(UIGraphicsGetCurrentContext());
+        CGContextFlush(UIGraphicsGetCurrentContext());
+        self.image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+    }
     
     // determine best SLDrawProtocol
     id<SLDrawProtocol> bestDraw = nil;
@@ -95,7 +114,7 @@
         }
     }
     
-    [bestDraw draw:self.pointsArray onImageView:self];
+    [bestDraw draw:self.pointsArray onCanvas:self];
 }
 
 

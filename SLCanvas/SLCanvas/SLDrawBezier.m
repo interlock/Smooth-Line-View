@@ -13,20 +13,25 @@
 @implementation SLDrawBezier
 
 -(float)getConfidence:(NSArray *)points {
-    if ( [points count] > 15 ) {
-        return 1.0f;
+    float distance = 0;
+    NSValue *lastPoint = nil;
+    for(NSValue *v in points) {
+        if ( lastPoint != nil ) {
+            distance += sqrtf(powf([lastPoint CGPointValue].x - [v CGPointValue].x, 2.0f) + powf([lastPoint CGPointValue].y - [v CGPointValue].y, 2.0f));
+        }
+        lastPoint = v;
     }
-    return 0.5f;
+    return ( 0.5f * ((15 - MIN(15,[points count])) / 15) ) +
+        (0.5f * ( MAX(100,[points count]) / 100));
 }
 
 -(CGRect)drawingFrame:(NSArray *)points withinFrame:(CGRect)frame {
     return frame;
 }
 
--(void)draw:(NSArray *)pointsArray onImageView:(UIImageView *)imageView {
-    NSLog(@"Drawing Bezier");
+-(void)draw:(NSArray *)pointsArray onCanvas:(SLCanvas *)canvas {
     NSMutableArray *newPointsArray = [NSMutableArray arrayWithArray:pointsArray];
-    // Pad pointsArray
+    // Pad pointsArray to finish off tail
     NSValue *lastPoint = [pointsArray lastObject];
     [newPointsArray addObject:lastPoint];
     [newPointsArray addObject:lastPoint];
@@ -34,13 +39,24 @@
     [newPointsArray addObject:lastPoint];
     pointsArray = [NSArray arrayWithArray:newPointsArray];
     
-    UIGraphicsBeginImageContext(CGSizeMake(imageView.frame.size.width, imageView.frame.size.height));
-    [imageView.image drawInRect:CGRectMake(0, 0, imageView.frame.size.width, imageView.frame.size.height)];
+    
+    UIGraphicsBeginImageContext(CGSizeMake(canvas.frame.size.width, canvas.frame.size.height));
+    [canvas.image drawInRect:CGRectMake(0, 0, canvas.frame.size.width, canvas.frame.size.height)];
     CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
-    CGContextSetLineWidth(UIGraphicsGetCurrentContext(), 8.0);
-    CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), 0.0, 0.5, 0.0, 0.9);
+    
+    float lineWidth = 8.0;
+    if ( [canvas.delegate respondsToSelector:@selector(drawingLineWidth:)] ) {
+        lineWidth = [canvas.delegate drawingLineWidth:canvas];
+    }
+    CGContextSetLineWidth(UIGraphicsGetCurrentContext(), lineWidth);
+    
+    UIColor *strokeColor = [UIColor colorWithRed:0.557 green:0.0 blue:0.0 alpha:0.9];
+    if ( [canvas.delegate respondsToSelector:@selector(drawingStrokeColor:)] ) {
+        strokeColor = [canvas.delegate drawingStrokeColor:canvas];
+    }
+    CGContextSetStrokeColorWithColor(UIGraphicsGetCurrentContext(), [strokeColor CGColor]);
+    
     CGContextBeginPath(UIGraphicsGetCurrentContext());
-	
     int curIndex = 0;
     CGFloat x0,y0,x1,y1,x2,y2,x3,y3;
     
@@ -115,7 +131,7 @@
 	CGContextAddPath(UIGraphicsGetCurrentContext(), path);
     CGContextStrokePath(UIGraphicsGetCurrentContext());
 	CGContextSetShouldAntialias(UIGraphicsGetCurrentContext(),YES);
-    imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+    canvas.image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 }
 

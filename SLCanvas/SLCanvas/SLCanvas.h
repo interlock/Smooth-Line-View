@@ -9,6 +9,20 @@
 #import <UIKit/UIKit.h>
 
 /**
+ SLCanvasProtocol
+ 
+ */
+
+@class SLCanvas;
+
+@protocol SLCanvasProtocol <NSObject>
+
+-(UIColor*)drawingStrokeColor:(SLCanvas*)canvas;
+-(float)drawingLineWidth:(SLCanvas*)canvas;
+
+@end
+
+/**
  SLCanvas
  
  A modified UIImageView which handles touch events to draw based on provided SLDraw implementations
@@ -17,7 +31,9 @@
 @interface SLCanvas : UIImageView {
     @private
     BOOL mouseSwiped;
+    BOOL trace;
     CGPoint lastPoint;
+    id<SLCanvasProtocol> delegate;
 }
 
 /**
@@ -28,5 +44,9 @@
  Priority ordered array of instance which implement <SLDrawProtocol>
  */
 @property (nonatomic,retain) NSArray *drawArray;
+
+@property (nonatomic,retain) UIColor *traceColor;
+
+@property (nonatomic,retain) id<SLCanvasProtocol> delegate;
 
 @end

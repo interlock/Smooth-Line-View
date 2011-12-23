@@ -11,26 +11,62 @@
 #include <math.h>
 #include <stdio.h>
 
+@interface SLDrawSpline () {
+    float confidenceDistance;
+}
+
+@end
+
 @implementation SLDrawSpline
 
--(float)getConfidence:(NSArray *)points {
-    if ( [points count] < 15 ) {
-        return 1.0f;
+-(id) init {
+    if ( self = [super init] ) {
+        confidenceDistance = 20.0f;
     }
-    return 0.5f;
+    return self;
+}
+
+/**
+ Weighted heavily towards drawing less than 15 points. 
+ A small portion is weighted on average point distance.
+ */
+-(float)getConfidence:(NSArray *)points {
+    float distance = 0;
+    int count = [points count];
+    NSValue *lastPoint = nil;
+    for(NSValue *v in points) {
+        if ( lastPoint != nil ) {
+            distance += sqrtf(powf([lastPoint CGPointValue].x - [v CGPointValue].x, 2.0f) + powf([lastPoint CGPointValue].y - [v CGPointValue].y, 2.0f));
+        }
+        lastPoint = v;
+    }
+    
+    return ( 0.8f * ((15 - MIN(15,[points count])) / 15) ) +
+    (0.2f * (MAX(confidenceDistance,(distance/count)) / confidenceDistance));
+    
 }
 
 -(CGRect)drawingFrame:(NSArray *)points withinFrame:(CGRect)frame {
     return frame;
 }
 
--(void)draw:(NSArray *)pointsArray onImageView:(UIImageView *)imageView {
-    NSLog(@"Drawing Spline");
-    UIGraphicsBeginImageContext(CGSizeMake(imageView.frame.size.width, imageView.frame.size.height));
-    [imageView.image drawInRect:CGRectMake(0, 0, imageView.frame.size.width, imageView.frame.size.height)];
+-(void)draw:(NSArray *)pointsArray onCanvas:(SLCanvas *)canvas {
+    UIGraphicsBeginImageContext(CGSizeMake(canvas.frame.size.width, canvas.frame.size.height));
+    [canvas.image drawInRect:CGRectMake(0, 0, canvas.frame.size.width, canvas.frame.size.height)];
+    
     CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
-    CGContextSetLineWidth(UIGraphicsGetCurrentContext(), 8.0);
-    CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), 0.557, 0.0, 0.0, 0.9);
+
+    float lineWidth = 8.0;
+    if ( [canvas.delegate respondsToSelector:@selector(drawingLineWidth:)] ) {
+        lineWidth = [canvas.delegate drawingLineWidth:canvas];
+    }
+    CGContextSetLineWidth(UIGraphicsGetCurrentContext(), lineWidth);
+    
+    UIColor *strokeColor = [UIColor colorWithRed:0.557 green:0.0 blue:0.0 alpha:0.9];
+    if ( [canvas.delegate respondsToSelector:@selector(drawingStrokeColor:)] ) {
+        strokeColor = [canvas.delegate drawingStrokeColor:canvas];
+    }
+    CGContextSetStrokeColorWithColor(UIGraphicsGetCurrentContext(), [strokeColor CGColor]);
     CGContextBeginPath(UIGraphicsGetCurrentContext());
 	
     CGPoint firstPoint = [[pointsArray objectAtIndex:0] CGPointValue];
@@ -62,7 +98,7 @@
 	
     CGContextStrokePath(UIGraphicsGetCurrentContext());
 	CGContextSetShouldAntialias(UIGraphicsGetCurrentContext(),YES);
-    imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+    canvas.image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 }
 

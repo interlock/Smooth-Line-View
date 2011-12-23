@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+#import "SLCanvas.h"
 
 /**
  This Protocol is must be implemented by an Object that will draw on the canvas.
@@ -30,7 +31,7 @@
 /**
  Draw the points provided on to a UIImageView->UIImage
  */
-- (void) draw:(NSArray*)pointsArray onImageView:(UIImageView*)imageView;
+- (void) draw:(NSArray*)pointsArray onCanvas:(SLCanvas*)canvas;
 
 @end
 

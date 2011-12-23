@@ -10,7 +10,7 @@
 #import "SLCanvas.h"
 
 
-@interface Smooth_Line_ViewViewController : UIViewController {
+@interface Smooth_Line_ViewViewController : UIViewController <SLCanvasProtocol> {
     SLCanvas *canvas;
 }
 @property (nonatomic,retain) SLCanvas *canvas;

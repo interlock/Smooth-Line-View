@@ -14,9 +14,7 @@ This view uses two methods of smoothing:
 
 ### TODO
 
-* Still need to find the best threshold to switch to Bezier from Catmull Rom.
 * Implement optimized frame drawing area for Bezier and Catmull
-* Implement a way to pass drawing properties to the SLDrawProtocol implementations: color, size, etc.
 * Optimize touch events in Canvas to reduce number of events stored
 * Provide way to serialize whole canvas as points
 * Provide easy way to export image of the canvas
