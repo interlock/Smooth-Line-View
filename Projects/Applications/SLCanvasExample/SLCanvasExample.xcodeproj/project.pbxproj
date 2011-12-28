@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EEE653F314ABB8ED00583EF1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE653F214ABB8ED00583EF1 /* CoreData.framework */; };
+		EEE653F514ABB8ED00583EF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE653F414ABB8ED00583EF1 /* CoreGraphics.framework */; };
+		EEE653F714ABB8ED00583EF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE653F614ABB8ED00583EF1 /* Foundation.framework */; };
+		EEE653F914ABB8ED00583EF1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE653F814ABB8ED00583EF1 /* QuartzCore.framework */; };
+		EEE653FB14ABB8ED00583EF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE653FA14ABB8ED00583EF1 /* UIKit.framework */; };
+		EEE6541C14ABB8ED00583EF1 /* SLCanvasExampleApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE6541B14ABB8ED00583EF1 /* SLCanvasExampleApplicationDelegate.m */; };
+		EEE6542A14ABB8ED00583EF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE6542914ABB8ED00583EF1 /* main.m */; };
+		EEE6542F14ABB8ED00583EF1 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE6542E14ABB8ED00583EF1 /* Icon-72.png */; };
+		EEE6543114ABB8ED00583EF1 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE6543014ABB8ED00583EF1 /* Icon-Small-50.png */; };
+		EEE6543314ABB8ED00583EF1 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE6543214ABB8ED00583EF1 /* Icon-Small.png */; };
+		EEE6543514ABB8ED00583EF1 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE6543414ABB8ED00583EF1 /* Icon-Small@2x.png */; };
+		EEE6543714ABB8ED00583EF1 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE6543614ABB8ED00583EF1 /* Icon.png */; };
+		EEE6543914ABB8ED00583EF1 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE6543814ABB8ED00583EF1 /* Icon@2x.png */; };
+		EEE6543B14ABB8ED00583EF1 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = EEE6543A14ABB8ED00583EF1 /* iTunesArtwork */; };
+		EEE6543E14ABB8ED00583EF1 /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE6543D14ABB8ED00583EF1 /* Default~iphone.png */; };
+		EEE6544014ABB8ED00583EF1 /* Default@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE6543F14ABB8ED00583EF1 /* Default@2x~iphone.png */; };
+		EEE6544414ABB8ED00583EF1 /* UserDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE6544314ABB8ED00583EF1 /* UserDefaults.plist */; };
+		EEE6545C14ABBCA700583EF1 /* Smooth_Line_ViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE6545B14ABBCA700583EF1 /* Smooth_Line_ViewViewController.m */; };
+		EEE6545E14ABBCB600583EF1 /* Smooth_Line_ViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEE6545D14ABBCB600583EF1 /* Smooth_Line_ViewViewController.xib */; };
+		EEE6546014ABBCD700583EF1 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEE6545F14ABBCD700583EF1 /* MainWindow.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EEE653EE14ABB8ED00583EF1 /* SLCanvasExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SLCanvasExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEE653F214ABB8ED00583EF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EEE653F414ABB8ED00583EF1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EEE653F614ABB8ED00583EF1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EEE653F814ABB8ED00583EF1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EEE653FA14ABB8ED00583EF1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EEE653FD14ABB8ED00583EF1 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		EEE653FE14ABB8ED00583EF1 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		EEE653FF14ABB8ED00583EF1 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		EEE6540014ABB8ED00583EF1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EEE6540114ABB8ED00583EF1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EEE6540214ABB8ED00583EF1 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		EEE6540314ABB8ED00583EF1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EEE6540414ABB8ED00583EF1 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		EEE6540514ABB8ED00583EF1 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		EEE6540614ABB8ED00583EF1 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		EEE6540714ABB8ED00583EF1 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		EEE6540814ABB8ED00583EF1 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		EEE6540914ABB8ED00583EF1 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		EEE6540A14ABB8ED00583EF1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EEE6540B14ABB8ED00583EF1 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		EEE6540C14ABB8ED00583EF1 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		EEE6540D14ABB8ED00583EF1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		EEE6540E14ABB8ED00583EF1 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		EEE6540F14ABB8ED00583EF1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		EEE6541014ABB8ED00583EF1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EEE6541314ABB8ED00583EF1 /* Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Application.xcconfig; path = Configurations/Application.xcconfig; sourceTree = "<group>"; };
+		EEE6541414ABB8ED00583EF1 /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Project.xcconfig; path = Configurations/Project.xcconfig; sourceTree = "<group>"; };
+		EEE6541514ABB8ED00583EF1 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configurations/Debug.xcconfig; sourceTree = "<group>"; };
+		EEE6541614ABB8ED00583EF1 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Configurations/Release.xcconfig; sourceTree = "<group>"; };
+		EEE6541714ABB8ED00583EF1 /* Version.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Version.xcconfig; path = Configurations/Version.xcconfig; sourceTree = "<group>"; };
+		EEE6541A14ABB8ED00583EF1 /* SLCanvasExampleApplicationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLCanvasExampleApplicationDelegate.h; path = Classes/ApplicationDelegate/SLCanvasExampleApplicationDelegate.h; sourceTree = "<group>"; };
+		EEE6541B14ABB8ED00583EF1 /* SLCanvasExampleApplicationDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SLCanvasExampleApplicationDelegate.m; path = Classes/ApplicationDelegate/SLCanvasExampleApplicationDelegate.m; sourceTree = "<group>"; };
+		EEE6542814ABB8ED00583EF1 /* SLCanvasExample.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLCanvasExample.pch; path = Project/SLCanvasExample.pch; sourceTree = "<group>"; };
+		EEE6542914ABB8ED00583EF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Project/main.m; sourceTree = "<group>"; };
+		EEE6542E14ABB8ED00583EF1 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Resources/Media/Icon/Icon-72.png"; sourceTree = "<group>"; };
+		EEE6543014ABB8ED00583EF1 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "Resources/Media/Icon/Icon-Small-50.png"; sourceTree = "<group>"; };
+		EEE6543214ABB8ED00583EF1 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Resources/Media/Icon/Icon-Small.png"; sourceTree = "<group>"; };
+		EEE6543414ABB8ED00583EF1 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Resources/Media/Icon/Icon-Small@2x.png"; sourceTree = "<group>"; };
+		EEE6543614ABB8ED00583EF1 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resources/Media/Icon/Icon.png; sourceTree = "<group>"; };
+		EEE6543814ABB8ED00583EF1 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Resources/Media/Icon/Icon@2x.png"; sourceTree = "<group>"; };
+		EEE6543A14ABB8ED00583EF1 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Resources/Media/Icon/iTunesArtwork; sourceTree = "<group>"; };
+		EEE6543D14ABB8ED00583EF1 /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default~iphone.png"; path = "Resources/Media/Launch/Default~iphone.png"; sourceTree = "<group>"; };
+		EEE6543F14ABB8ED00583EF1 /* Default@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x~iphone.png"; path = "Resources/Media/Launch/Default@2x~iphone.png"; sourceTree = "<group>"; };
+		EEE6544214ABB8ED00583EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/PropertyLists/Info.plist; sourceTree = "<group>"; };
+		EEE6544314ABB8ED00583EF1 /* UserDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = UserDefaults.plist; path = Resources/PropertyLists/UserDefaults.plist; sourceTree = "<group>"; };
+		EEE6545A14ABBCA700583EF1 /* Smooth_Line_ViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Smooth_Line_ViewViewController.h; path = Classes/Smooth_Line_ViewViewController.h; sourceTree = "<group>"; };
+		EEE6545B14ABBCA700583EF1 /* Smooth_Line_ViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Smooth_Line_ViewViewController.m; path = Classes/Smooth_Line_ViewViewController.m; sourceTree = "<group>"; };
+		EEE6545D14ABBCB600583EF1 /* Smooth_Line_ViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Smooth_Line_ViewViewController.xib; sourceTree = "<group>"; };
+		EEE6545F14ABBCD700583EF1 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EEE653EA14ABB8ED00583EF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE653F314ABB8ED00583EF1 /* CoreData.framework in Frameworks */,
+				EEE653F514ABB8ED00583EF1 /* CoreGraphics.framework in Frameworks */,
+				EEE653F714ABB8ED00583EF1 /* Foundation.framework in Frameworks */,
+				EEE653F914ABB8ED00583EF1 /* QuartzCore.framework in Frameworks */,
+				EEE653FB14ABB8ED00583EF1 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EEE653E214ABB8ED00583EF1 = {
+			isa = PBXGroup;
+			children = (
+				EEE6541114ABB8ED00583EF1 /* SLCanvasExample */,
+				EEE653F114ABB8ED00583EF1 /* Frameworks */,
+				EEE653EF14ABB8ED00583EF1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EEE653EF14ABB8ED00583EF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEE653EE14ABB8ED00583EF1 /* SLCanvasExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEE653F114ABB8ED00583EF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEE653F214ABB8ED00583EF1 /* CoreData.framework */,
+				EEE653F414ABB8ED00583EF1 /* CoreGraphics.framework */,
+				EEE653F614ABB8ED00583EF1 /* Foundation.framework */,
+				EEE653F814ABB8ED00583EF1 /* QuartzCore.framework */,
+				EEE653FA14ABB8ED00583EF1 /* UIKit.framework */,
+				EEE653FC14ABB8ED00583EF1 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEE653FC14ABB8ED00583EF1 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEE653FD14ABB8ED00583EF1 /* AddressBook.framework */,
+				EEE653FE14ABB8ED00583EF1 /* AddressBookUI.framework */,
+				EEE653FF14ABB8ED00583EF1 /* AssetsLibrary.framework */,
+				EEE6540014ABB8ED00583EF1 /* AVFoundation.framework */,
+				EEE6540114ABB8ED00583EF1 /* CFNetwork.framework */,
+				EEE6540214ABB8ED00583EF1 /* CoreFoundation.framework */,
+				EEE6540314ABB8ED00583EF1 /* CoreLocation.framework */,
+				EEE6540414ABB8ED00583EF1 /* CoreMotion.framework */,
+				EEE6540514ABB8ED00583EF1 /* CoreText.framework */,
+				EEE6540614ABB8ED00583EF1 /* EventKit.framework */,
+				EEE6540714ABB8ED00583EF1 /* EventKitUI.framework */,
+				EEE6540814ABB8ED00583EF1 /* GameKit.framework */,
+				EEE6540914ABB8ED00583EF1 /* ImageIO.framework */,
+				EEE6540A14ABB8ED00583EF1 /* MapKit.framework */,
+				EEE6540B14ABB8ED00583EF1 /* MediaPlayer.framework */,
+				EEE6540C14ABB8ED00583EF1 /* MessageUI.framework */,
+				EEE6540D14ABB8ED00583EF1 /* MobileCoreServices.framework */,
+				EEE6540E14ABB8ED00583EF1 /* QuickLook.framework */,
+				EEE6540F14ABB8ED00583EF1 /* StoreKit.framework */,
+				EEE6541014ABB8ED00583EF1 /* SystemConfiguration.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		EEE6541114ABB8ED00583EF1 /* SLCanvasExample */ = {
+			isa = PBXGroup;
+			children = (
+				EEE6541214ABB8ED00583EF1 /* Configurations */,
+				EEE6541814ABB8ED00583EF1 /* Classes */,
+				EEE6542714ABB8ED00583EF1 /* Project */,
+				EEE6542B14ABB8ED00583EF1 /* Resources */,
+			);
+			path = SLCanvasExample;
+			sourceTree = "<group>";
+		};
+		EEE6541214ABB8ED00583EF1 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				EEE6541314ABB8ED00583EF1 /* Application.xcconfig */,
+				EEE6541414ABB8ED00583EF1 /* Project.xcconfig */,
+				EEE6541514ABB8ED00583EF1 /* Debug.xcconfig */,
+				EEE6541614ABB8ED00583EF1 /* Release.xcconfig */,
+				EEE6541714ABB8ED00583EF1 /* Version.xcconfig */,
+			);
+			name = Configurations;
+			sourceTree = "<group>";
+		};
+		EEE6541814ABB8ED00583EF1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EEE6541914ABB8ED00583EF1 /* ApplicationDelegate */,
+				EEE6542014ABB8ED00583EF1 /* Controllers */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		EEE6541914ABB8ED00583EF1 /* ApplicationDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				EEE6545F14ABBCD700583EF1 /* MainWindow.xib */,
+				EEE6541A14ABB8ED00583EF1 /* SLCanvasExampleApplicationDelegate.h */,
+				EEE6541B14ABB8ED00583EF1 /* SLCanvasExampleApplicationDelegate.m */,
+			);
+			name = ApplicationDelegate;
+			sourceTree = "<group>";
+		};
+		EEE6542014ABB8ED00583EF1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EEE6545D14ABBCB600583EF1 /* Smooth_Line_ViewViewController.xib */,
+				EEE6545A14ABBCA700583EF1 /* Smooth_Line_ViewViewController.h */,
+				EEE6545B14ABBCA700583EF1 /* Smooth_Line_ViewViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		EEE6542714ABB8ED00583EF1 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				EEE6542814ABB8ED00583EF1 /* SLCanvasExample.pch */,
+				EEE6542914ABB8ED00583EF1 /* main.m */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		EEE6542B14ABB8ED00583EF1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EEE6542C14ABB8ED00583EF1 /* Media */,
+				EEE6544114ABB8ED00583EF1 /* PropertyLists */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EEE6542C14ABB8ED00583EF1 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				EEE6542D14ABB8ED00583EF1 /* Icon */,
+				EEE6543C14ABB8ED00583EF1 /* Launch */,
+			);
+			name = Media;
+			sourceTree = "<group>";
+		};
+		EEE6542D14ABB8ED00583EF1 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				EEE6542E14ABB8ED00583EF1 /* Icon-72.png */,
+				EEE6543014ABB8ED00583EF1 /* Icon-Small-50.png */,
+				EEE6543214ABB8ED00583EF1 /* Icon-Small.png */,
+				EEE6543414ABB8ED00583EF1 /* Icon-Small@2x.png */,
+				EEE6543614ABB8ED00583EF1 /* Icon.png */,
+				EEE6543814ABB8ED00583EF1 /* Icon@2x.png */,
+				EEE6543A14ABB8ED00583EF1 /* iTunesArtwork */,
+			);
+			name = Icon;
+			sourceTree = "<group>";
+		};
+		EEE6543C14ABB8ED00583EF1 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				EEE6543D14ABB8ED00583EF1 /* Default~iphone.png */,
+				EEE6543F14ABB8ED00583EF1 /* Default@2x~iphone.png */,
+			);
+			name = Launch;
+			sourceTree = "<group>";
+		};
+		EEE6544114ABB8ED00583EF1 /* PropertyLists */ = {
+			isa = PBXGroup;
+			children = (
+				EEE6544214ABB8ED00583EF1 /* Info.plist */,
+				EEE6544314ABB8ED00583EF1 /* UserDefaults.plist */,
+			);
+			name = PropertyLists;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EEE653ED14ABB8ED00583EF1 /* SLCanvasExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEE6544714ABB8ED00583EF1 /* Build configuration list for PBXNativeTarget "SLCanvasExample" */;
+			buildPhases = (
+				EEE653E914ABB8ED00583EF1 /* Sources */,
+				EEE653EA14ABB8ED00583EF1 /* Frameworks */,
+				EEE653EB14ABB8ED00583EF1 /* Resources */,
+				EEE653EC14ABB8ED00583EF1 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SLCanvasExample;
+			productName = SLCanvasExample;
+			productReference = EEE653EE14ABB8ED00583EF1 /* SLCanvasExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EEE653E414ABB8ED00583EF1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = EEE653E714ABB8ED00583EF1 /* Build configuration list for PBXProject "SLCanvasExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EEE653E214ABB8ED00583EF1;
+			productRefGroup = EEE653EF14ABB8ED00583EF1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EEE653ED14ABB8ED00583EF1 /* SLCanvasExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EEE653EB14ABB8ED00583EF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE6542F14ABB8ED00583EF1 /* Icon-72.png in Resources */,
+				EEE6543114ABB8ED00583EF1 /* Icon-Small-50.png in Resources */,
+				EEE6543314ABB8ED00583EF1 /* Icon-Small.png in Resources */,
+				EEE6543514ABB8ED00583EF1 /* Icon-Small@2x.png in Resources */,
+				EEE6543714ABB8ED00583EF1 /* Icon.png in Resources */,
+				EEE6543914ABB8ED00583EF1 /* Icon@2x.png in Resources */,
+				EEE6543B14ABB8ED00583EF1 /* iTunesArtwork in Resources */,
+				EEE6543E14ABB8ED00583EF1 /* Default~iphone.png in Resources */,
+				EEE6544014ABB8ED00583EF1 /* Default@2x~iphone.png in Resources */,
+				EEE6544414ABB8ED00583EF1 /* UserDefaults.plist in Resources */,
+				EEE6545E14ABBCB600583EF1 /* Smooth_Line_ViewViewController.xib in Resources */,
+				EEE6546014ABBCD700583EF1 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EEE653EC14ABB8ED00583EF1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/tcsh;
+			shellScript = "#${SCRIPT_COPY_RESOURCE_BUNDLE} ${MYLIBRARYKIT_RESOURCE_BUNDLE_NAME}";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEE653E914ABB8ED00583EF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE6541C14ABB8ED00583EF1 /* SLCanvasExampleApplicationDelegate.m in Sources */,
+				EEE6542A14ABB8ED00583EF1 /* main.m in Sources */,
+				EEE6545C14ABBCA700583EF1 /* Smooth_Line_ViewViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EEE6544514ABB8ED00583EF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEE6541414ABB8ED00583EF1 /* Project.xcconfig */;
+			buildSettings = {
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EEE6544614ABB8ED00583EF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEE6541414ABB8ED00583EF1 /* Project.xcconfig */;
+			buildSettings = {
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		EEE6544814ABB8ED00583EF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEE6541514ABB8ED00583EF1 /* Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		EEE6544914ABB8ED00583EF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEE6541614ABB8ED00583EF1 /* Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EEE653E714ABB8ED00583EF1 /* Build configuration list for PBXProject "SLCanvasExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEE6544514ABB8ED00583EF1 /* Debug */,
+				EEE6544614ABB8ED00583EF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEE6544714ABB8ED00583EF1 /* Build configuration list for PBXNativeTarget "SLCanvasExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEE6544814ABB8ED00583EF1 /* Debug */,
+				EEE6544914ABB8ED00583EF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EEE653E414ABB8ED00583EF1 /* Project object */;
+}

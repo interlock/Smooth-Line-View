@@ -1,0 +1,11 @@
+
+//
+// SLCanvasExample/Configurations/Project.xcconfig
+//
+
+#include "../../../Configurations/Paths.xcconfig"
+#include "../../../Configurations/Platform.xcconfig"
+#include "../../../Configurations/Project.xcconfig"
+
+INFOPLIST_ORGANIZATION_NAME	= __MyCompanyName__
+CODE_SIGN_IDENTITY = iPhone Developer

@@ -1,0 +1,36 @@
+
+//
+// SLCanvas/Configurations/Library.xcconfig
+//
+
+#include "../../../../../Configurations/Library.xcconfig"
+#include "../../../../../Configurations/Libraries.xcconfig"
+
+// Product Name
+PRODUCT_NAME = SLCanvas
+
+// Library Version
+BUILD_LIBRARY_VERSION = A
+
+// Library Resource Bundle
+LIBRARY_RESOURCE_BUNDLE_NAME = SLCanvas.bundle
+
+// Clang
+RUN_CLANG_STATIC_ANALYZER = YES
+
+// Search Paths
+HEADER_SEARCH_PATHS  = $(STDLIB_HEADER_PATH)
+LIBRARY_SEARCH_PATHS = $(STDLIB_LIBRARY_PATH)
+
+//
+// Cut and paste this to Configurations/Libraries.xcconfig
+// and rename to match conventions
+// FooKit to FOOKIT
+
+// SLCanvas
+
+//SLCANVAS_HEADER_PATH          = $(BUILD_PLATFORM_NAME_PATH)/SLCanvas/Headers/
+//SLCANVAS_PRIVATEHEADER_PATH   = $(BUILD_PLATFORM_NAME_PATH)/SLCanvas/PrivateHeaders/
+//SLCANVAS_LIBRARY_PATH         = $(BUILD_PLATFORM_NAME_PATH)/SLCanvas/
+//SLCANVAS_LIBRARY_FLAG         = -lSLCanvas
+//SLCANVAS_RESOURCE_BUNDLE_NAME = SLCanvas.bundle

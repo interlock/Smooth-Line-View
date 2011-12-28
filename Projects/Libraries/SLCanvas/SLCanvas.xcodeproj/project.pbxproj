@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EEE6538414ABB48D00583EF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE6538314ABB48D00583EF1 /* Foundation.framework */; };
+		EEE653BC14ABB5C500583EF1 /* SLCanvas.h in Headers */ = {isa = PBXBuildFile; fileRef = EEE653B514ABB5C500583EF1 /* SLCanvas.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEE653BD14ABB5C500583EF1 /* SLCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE653B614ABB5C500583EF1 /* SLCanvas.m */; };
+		EEE653BE14ABB5C500583EF1 /* SLDrawBezier.h in Headers */ = {isa = PBXBuildFile; fileRef = EEE653B714ABB5C500583EF1 /* SLDrawBezier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEE653BF14ABB5C500583EF1 /* SLDrawBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE653B814ABB5C500583EF1 /* SLDrawBezier.m */; };
+		EEE653C014ABB5C500583EF1 /* SLDrawProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = EEE653B914ABB5C500583EF1 /* SLDrawProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEE653C114ABB5C500583EF1 /* SLDrawSpline.h in Headers */ = {isa = PBXBuildFile; fileRef = EEE653BA14ABB5C500583EF1 /* SLDrawSpline.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEE653C214ABB5C500583EF1 /* SLDrawSpline.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE653BB14ABB5C500583EF1 /* SLDrawSpline.m */; };
+		EEE653D314ABB5D300583EF1 /* BezierCurve.h in Headers */ = {isa = PBXBuildFile; fileRef = EEE653C414ABB5D300583EF1 /* BezierCurve.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		EEE653D414ABB5D300583EF1 /* BezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE653C514ABB5D300583EF1 /* BezierCurve.m */; };
+		EEE653D514ABB5D300583EF1 /* CatmullRomSpline.h in Headers */ = {isa = PBXBuildFile; fileRef = EEE653C614ABB5D300583EF1 /* CatmullRomSpline.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		EEE653D614ABB5D300583EF1 /* CatmullRomSpline.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE653C714ABB5D300583EF1 /* CatmullRomSpline.m */; };
+		EEE653D714ABB5D300583EF1 /* CGPointArithmetic.h in Headers */ = {isa = PBXBuildFile; fileRef = EEE653C814ABB5D300583EF1 /* CGPointArithmetic.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		EEE653D814ABB5D300583EF1 /* CubicBezierCurve.h in Headers */ = {isa = PBXBuildFile; fileRef = EEE653C914ABB5D300583EF1 /* CubicBezierCurve.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		EEE653D914ABB5D300583EF1 /* CubicBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE653CA14ABB5D300583EF1 /* CubicBezierCurve.m */; };
+		EEE653DA14ABB5D300583EF1 /* LinearBezierCurve.h in Headers */ = {isa = PBXBuildFile; fileRef = EEE653CB14ABB5D300583EF1 /* LinearBezierCurve.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		EEE653DB14ABB5D300583EF1 /* LinearBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE653CC14ABB5D300583EF1 /* LinearBezierCurve.m */; };
+		EEE653DC14ABB5D300583EF1 /* NSArray_PointArray.h in Headers */ = {isa = PBXBuildFile; fileRef = EEE653CD14ABB5D300583EF1 /* NSArray_PointArray.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		EEE653DD14ABB5D300583EF1 /* NSArray_PointArray.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE653CE14ABB5D300583EF1 /* NSArray_PointArray.m */; };
+		EEE653DE14ABB5D300583EF1 /* QuadraticBezierCurve.h in Headers */ = {isa = PBXBuildFile; fileRef = EEE653CF14ABB5D300583EF1 /* QuadraticBezierCurve.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		EEE653DF14ABB5D300583EF1 /* QuadraticBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE653D014ABB5D300583EF1 /* QuadraticBezierCurve.m */; };
+		EEE653E014ABB5D300583EF1 /* Spline.h in Headers */ = {isa = PBXBuildFile; fileRef = EEE653D114ABB5D300583EF1 /* Spline.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		EEE653E114ABB5D300583EF1 /* Spline.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE653D214ABB5D300583EF1 /* Spline.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EEE6537D14ABB48D00583EF1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(BUILD_SHARED_BUNDLES_PATH)";
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EEE6538014ABB48D00583EF1 /* libSLCanvas.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSLCanvas.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEE6538314ABB48D00583EF1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EEE6538614ABB48D00583EF1 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		EEE6538714ABB48D00583EF1 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		EEE6538814ABB48D00583EF1 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		EEE6538914ABB48D00583EF1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EEE6538A14ABB48D00583EF1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EEE6538B14ABB48D00583EF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EEE6538C14ABB48D00583EF1 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		EEE6538D14ABB48D00583EF1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EEE6538E14ABB48D00583EF1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EEE6538F14ABB48D00583EF1 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		EEE6539014ABB48D00583EF1 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		EEE6539114ABB48D00583EF1 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		EEE6539214ABB48D00583EF1 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		EEE6539314ABB48D00583EF1 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		EEE6539414ABB48D00583EF1 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		EEE6539514ABB48D00583EF1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EEE6539614ABB48D00583EF1 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		EEE6539714ABB48D00583EF1 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		EEE6539814ABB48D00583EF1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		EEE6539914ABB48D00583EF1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EEE6539A14ABB48D00583EF1 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		EEE6539B14ABB48D00583EF1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		EEE6539C14ABB48D00583EF1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EEE6539D14ABB48D00583EF1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EEE653A014ABB48D00583EF1 /* Library.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Library.xcconfig; path = Configurations/Library.xcconfig; sourceTree = "<group>"; };
+		EEE653A114ABB48D00583EF1 /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Project.xcconfig; path = Configurations/Project.xcconfig; sourceTree = "<group>"; };
+		EEE653A214ABB48D00583EF1 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configurations/Debug.xcconfig; sourceTree = "<group>"; };
+		EEE653A314ABB48D00583EF1 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Configurations/Release.xcconfig; sourceTree = "<group>"; };
+		EEE653A414ABB48D00583EF1 /* UnitTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = UnitTests.xcconfig; path = Configurations/UnitTests.xcconfig; sourceTree = "<group>"; };
+		EEE653A514ABB48D00583EF1 /* Version.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Version.xcconfig; path = Configurations/Version.xcconfig; sourceTree = "<group>"; };
+		EEE653AD14ABB48D00583EF1 /* SLCanvasLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLCanvasLibrary.h; path = Project/Library/SLCanvasLibrary.h; sourceTree = "<group>"; };
+		EEE653AE14ABB48D00583EF1 /* SLCanvasLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SLCanvasLibrary.m; path = Project/Library/SLCanvasLibrary.m; sourceTree = "<group>"; };
+		EEE653B514ABB5C500583EF1 /* SLCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLCanvas.h; path = Project/Library/SLCanvas.h; sourceTree = "<group>"; };
+		EEE653B614ABB5C500583EF1 /* SLCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLCanvas.m; path = Project/Library/SLCanvas.m; sourceTree = "<group>"; };
+		EEE653B714ABB5C500583EF1 /* SLDrawBezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLDrawBezier.h; path = Project/Library/SLDrawBezier.h; sourceTree = "<group>"; };
+		EEE653B814ABB5C500583EF1 /* SLDrawBezier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLDrawBezier.m; path = Project/Library/SLDrawBezier.m; sourceTree = "<group>"; };
+		EEE653B914ABB5C500583EF1 /* SLDrawProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLDrawProtocol.h; path = Project/Library/SLDrawProtocol.h; sourceTree = "<group>"; };
+		EEE653BA14ABB5C500583EF1 /* SLDrawSpline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLDrawSpline.h; path = Project/Library/SLDrawSpline.h; sourceTree = "<group>"; };
+		EEE653BB14ABB5C500583EF1 /* SLDrawSpline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLDrawSpline.m; path = Project/Library/SLDrawSpline.m; sourceTree = "<group>"; };
+		EEE653C414ABB5D300583EF1 /* BezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierCurve.h; sourceTree = "<group>"; };
+		EEE653C514ABB5D300583EF1 /* BezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierCurve.m; sourceTree = "<group>"; };
+		EEE653C614ABB5D300583EF1 /* CatmullRomSpline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatmullRomSpline.h; sourceTree = "<group>"; };
+		EEE653C714ABB5D300583EF1 /* CatmullRomSpline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatmullRomSpline.m; sourceTree = "<group>"; };
+		EEE653C814ABB5D300583EF1 /* CGPointArithmetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPointArithmetic.h; sourceTree = "<group>"; };
+		EEE653C914ABB5D300583EF1 /* CubicBezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubicBezierCurve.h; sourceTree = "<group>"; };
+		EEE653CA14ABB5D300583EF1 /* CubicBezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubicBezierCurve.m; sourceTree = "<group>"; };
+		EEE653CB14ABB5D300583EF1 /* LinearBezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearBezierCurve.h; sourceTree = "<group>"; };
+		EEE653CC14ABB5D300583EF1 /* LinearBezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinearBezierCurve.m; sourceTree = "<group>"; };
+		EEE653CD14ABB5D300583EF1 /* NSArray_PointArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArray_PointArray.h; sourceTree = "<group>"; };
+		EEE653CE14ABB5D300583EF1 /* NSArray_PointArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_PointArray.m; sourceTree = "<group>"; };
+		EEE653CF14ABB5D300583EF1 /* QuadraticBezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticBezierCurve.h; sourceTree = "<group>"; };
+		EEE653D014ABB5D300583EF1 /* QuadraticBezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticBezierCurve.m; sourceTree = "<group>"; };
+		EEE653D114ABB5D300583EF1 /* Spline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spline.h; sourceTree = "<group>"; };
+		EEE653D214ABB5D300583EF1 /* Spline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spline.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EEE6537C14ABB48D00583EF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE6538414ABB48D00583EF1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EEE6537314ABB48D00583EF1 = {
+			isa = PBXGroup;
+			children = (
+				EEE6539E14ABB48D00583EF1 /* SLCanvas */,
+				EEE6538214ABB48D00583EF1 /* Frameworks */,
+				EEE6538114ABB48D00583EF1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EEE6538114ABB48D00583EF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEE6538014ABB48D00583EF1 /* libSLCanvas.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEE6538214ABB48D00583EF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEE6538314ABB48D00583EF1 /* Foundation.framework */,
+				EEE6538514ABB48D00583EF1 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEE6538514ABB48D00583EF1 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEE6538614ABB48D00583EF1 /* AddressBook.framework */,
+				EEE6538714ABB48D00583EF1 /* AddressBookUI.framework */,
+				EEE6538814ABB48D00583EF1 /* AssetsLibrary.framework */,
+				EEE6538914ABB48D00583EF1 /* AVFoundation.framework */,
+				EEE6538A14ABB48D00583EF1 /* CFNetwork.framework */,
+				EEE6538B14ABB48D00583EF1 /* CoreData.framework */,
+				EEE6538C14ABB48D00583EF1 /* CoreFoundation.framework */,
+				EEE6538D14ABB48D00583EF1 /* CoreGraphics.framework */,
+				EEE6538E14ABB48D00583EF1 /* CoreLocation.framework */,
+				EEE6538F14ABB48D00583EF1 /* CoreMotion.framework */,
+				EEE6539014ABB48D00583EF1 /* CoreText.framework */,
+				EEE6539114ABB48D00583EF1 /* EventKit.framework */,
+				EEE6539214ABB48D00583EF1 /* EventKitUI.framework */,
+				EEE6539314ABB48D00583EF1 /* GameKit.framework */,
+				EEE6539414ABB48D00583EF1 /* ImageIO.framework */,
+				EEE6539514ABB48D00583EF1 /* MapKit.framework */,
+				EEE6539614ABB48D00583EF1 /* MediaPlayer.framework */,
+				EEE6539714ABB48D00583EF1 /* MessageUI.framework */,
+				EEE6539814ABB48D00583EF1 /* MobileCoreServices.framework */,
+				EEE6539914ABB48D00583EF1 /* QuartzCore.framework */,
+				EEE6539A14ABB48D00583EF1 /* QuickLook.framework */,
+				EEE6539B14ABB48D00583EF1 /* StoreKit.framework */,
+				EEE6539C14ABB48D00583EF1 /* SystemConfiguration.framework */,
+				EEE6539D14ABB48D00583EF1 /* UIKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		EEE6539E14ABB48D00583EF1 /* SLCanvas */ = {
+			isa = PBXGroup;
+			children = (
+				EEE6539F14ABB48D00583EF1 /* Configurations */,
+				EEE653A614ABB48D00583EF1 /* Classes */,
+				EEE653AA14ABB48D00583EF1 /* Project */,
+			);
+			path = SLCanvas;
+			sourceTree = "<group>";
+		};
+		EEE6539F14ABB48D00583EF1 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				EEE653A014ABB48D00583EF1 /* Library.xcconfig */,
+				EEE653A114ABB48D00583EF1 /* Project.xcconfig */,
+				EEE653A214ABB48D00583EF1 /* Debug.xcconfig */,
+				EEE653A314ABB48D00583EF1 /* Release.xcconfig */,
+				EEE653A414ABB48D00583EF1 /* UnitTests.xcconfig */,
+				EEE653A514ABB48D00583EF1 /* Version.xcconfig */,
+			);
+			name = Configurations;
+			sourceTree = "<group>";
+		};
+		EEE653A614ABB48D00583EF1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EEE653C314ABB5D300583EF1 /* spline */,
+				EEE653B514ABB5C500583EF1 /* SLCanvas.h */,
+				EEE653B614ABB5C500583EF1 /* SLCanvas.m */,
+				EEE653B714ABB5C500583EF1 /* SLDrawBezier.h */,
+				EEE653B814ABB5C500583EF1 /* SLDrawBezier.m */,
+				EEE653B914ABB5C500583EF1 /* SLDrawProtocol.h */,
+				EEE653BA14ABB5C500583EF1 /* SLDrawSpline.h */,
+				EEE653BB14ABB5C500583EF1 /* SLDrawSpline.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		EEE653AA14ABB48D00583EF1 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				EEE653AC14ABB48D00583EF1 /* Library */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		EEE653AC14ABB48D00583EF1 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				EEE653AD14ABB48D00583EF1 /* SLCanvasLibrary.h */,
+				EEE653AE14ABB48D00583EF1 /* SLCanvasLibrary.m */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		EEE653C314ABB5D300583EF1 /* spline */ = {
+			isa = PBXGroup;
+			children = (
+				EEE653C414ABB5D300583EF1 /* BezierCurve.h */,
+				EEE653C514ABB5D300583EF1 /* BezierCurve.m */,
+				EEE653C614ABB5D300583EF1 /* CatmullRomSpline.h */,
+				EEE653C714ABB5D300583EF1 /* CatmullRomSpline.m */,
+				EEE653C814ABB5D300583EF1 /* CGPointArithmetic.h */,
+				EEE653C914ABB5D300583EF1 /* CubicBezierCurve.h */,
+				EEE653CA14ABB5D300583EF1 /* CubicBezierCurve.m */,
+				EEE653CB14ABB5D300583EF1 /* LinearBezierCurve.h */,
+				EEE653CC14ABB5D300583EF1 /* LinearBezierCurve.m */,
+				EEE653CD14ABB5D300583EF1 /* NSArray_PointArray.h */,
+				EEE653CE14ABB5D300583EF1 /* NSArray_PointArray.m */,
+				EEE653CF14ABB5D300583EF1 /* QuadraticBezierCurve.h */,
+				EEE653D014ABB5D300583EF1 /* QuadraticBezierCurve.m */,
+				EEE653D114ABB5D300583EF1 /* Spline.h */,
+				EEE653D214ABB5D300583EF1 /* Spline.m */,
+			);
+			name = spline;
+			path = Project/Library/spline;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EEE6537A14ABB48D00583EF1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE653BC14ABB5C500583EF1 /* SLCanvas.h in Headers */,
+				EEE653BE14ABB5C500583EF1 /* SLDrawBezier.h in Headers */,
+				EEE653C014ABB5C500583EF1 /* SLDrawProtocol.h in Headers */,
+				EEE653C114ABB5C500583EF1 /* SLDrawSpline.h in Headers */,
+				EEE653D314ABB5D300583EF1 /* BezierCurve.h in Headers */,
+				EEE653D514ABB5D300583EF1 /* CatmullRomSpline.h in Headers */,
+				EEE653D714ABB5D300583EF1 /* CGPointArithmetic.h in Headers */,
+				EEE653D814ABB5D300583EF1 /* CubicBezierCurve.h in Headers */,
+				EEE653DA14ABB5D300583EF1 /* LinearBezierCurve.h in Headers */,
+				EEE653DC14ABB5D300583EF1 /* NSArray_PointArray.h in Headers */,
+				EEE653DE14ABB5D300583EF1 /* QuadraticBezierCurve.h in Headers */,
+				EEE653E014ABB5D300583EF1 /* Spline.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		EEE6537F14ABB48D00583EF1 /* SLCanvas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEE653B214ABB48D00583EF1 /* Build configuration list for PBXNativeTarget "SLCanvas" */;
+			buildPhases = (
+				EEE6537A14ABB48D00583EF1 /* Headers */,
+				EEE6537B14ABB48D00583EF1 /* Sources */,
+				EEE6537C14ABB48D00583EF1 /* Frameworks */,
+				EEE6537D14ABB48D00583EF1 /* CopyFiles */,
+				EEE6537E14ABB48D00583EF1 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SLCanvas;
+			productName = SLCanvas;
+			productReference = EEE6538014ABB48D00583EF1 /* libSLCanvas.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EEE6537514ABB48D00583EF1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = EEE6537814ABB48D00583EF1 /* Build configuration list for PBXProject "SLCanvas" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EEE6537314ABB48D00583EF1;
+			productRefGroup = EEE6538114ABB48D00583EF1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EEE6537F14ABB48D00583EF1 /* SLCanvas */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EEE6537E14ABB48D00583EF1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/tcsh;
+			shellScript = "${SCRIPT_DEPLOY_LIBRARY}";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEE6537B14ABB48D00583EF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE653BD14ABB5C500583EF1 /* SLCanvas.m in Sources */,
+				EEE653BF14ABB5C500583EF1 /* SLDrawBezier.m in Sources */,
+				EEE653C214ABB5C500583EF1 /* SLDrawSpline.m in Sources */,
+				EEE653D414ABB5D300583EF1 /* BezierCurve.m in Sources */,
+				EEE653D614ABB5D300583EF1 /* CatmullRomSpline.m in Sources */,
+				EEE653D914ABB5D300583EF1 /* CubicBezierCurve.m in Sources */,
+				EEE653DB14ABB5D300583EF1 /* LinearBezierCurve.m in Sources */,
+				EEE653DD14ABB5D300583EF1 /* NSArray_PointArray.m in Sources */,
+				EEE653DF14ABB5D300583EF1 /* QuadraticBezierCurve.m in Sources */,
+				EEE653E114ABB5D300583EF1 /* Spline.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EEE653B014ABB48D00583EF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEE653A114ABB48D00583EF1 /* Project.xcconfig */;
+			buildSettings = {
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EEE653B114ABB48D00583EF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEE653A114ABB48D00583EF1 /* Project.xcconfig */;
+			buildSettings = {
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		EEE653B314ABB48D00583EF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEE653A214ABB48D00583EF1 /* Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		EEE653B414ABB48D00583EF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEE653A314ABB48D00583EF1 /* Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EEE6537814ABB48D00583EF1 /* Build configuration list for PBXProject "SLCanvas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEE653B014ABB48D00583EF1 /* Debug */,
+				EEE653B114ABB48D00583EF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEE653B214ABB48D00583EF1 /* Build configuration list for PBXNativeTarget "SLCanvas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEE653B314ABB48D00583EF1 /* Debug */,
+				EEE653B414ABB48D00583EF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EEE6537514ABB48D00583EF1 /* Project object */;
+}
