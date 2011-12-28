@@ -1,0 +1,12 @@
+
+//
+// Project.xcconfig
+//
+
+#include "Paths.xcconfig"
+#include "Compiler.xcconfig"
+
+SYMROOT = Build
+//SOURCE_ROOT = Source
+//SRCROOT = Source
+CODE_SIGN_IDENTITY = iPhone Developer

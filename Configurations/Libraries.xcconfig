@@ -1,0 +1,24 @@
+
+//
+// Libraries.xcconfig
+// Local Libraries - Declarations by alpha. Order unimportant.
+//
+// A newly created BuildKit Library project template has these declarations
+// in the projects Configuration directory in the file Library.xcconfig. Copy and
+// paste here and library header and linker paths will be available to other library 
+// and application projects in the tree that add the declarations to their own
+// Application.xcconfig or Library.xcconfig.
+//
+// The libraries below are provided as examples of course.
+//
+
+#include "Frameworks.xcconfig"
+
+// SLCanvas
+
+SLCANVAS_HEADER_PATH          = $(BUILD_PLATFORM_NAME_PATH)/SLCanvas/Headers/
+SLCANVAS_PRIVATEHEADER_PATH   = $(BUILD_PLATFORM_NAME_PATH)/SLCanvas/PrivateHeaders/
+SLCANVAS_LIBRARY_PATH         = $(BUILD_PLATFORM_NAME_PATH)/SLCanvas/
+SLCANVAS_LIBRARY_FLAG         = -lSLCanvas
+SLCANVAS_RESOURCE_BUNDLE_NAME = SLCanvas.bundle
+
