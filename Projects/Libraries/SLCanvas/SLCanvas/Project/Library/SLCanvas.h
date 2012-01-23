@@ -32,6 +32,7 @@
     @private
     BOOL mouseSwiped;
     BOOL trace;
+    BOOL _enabled;
     CGPoint lastPoint;
     /**
      CGPoint distance required to capture the point.
@@ -67,6 +68,8 @@
 
 @property (nonatomic,retain) NSMutableArray *undoArray;// Array of NSPointers to do undo/redo operation with
 
+@property (nonatomic,assign) BOOL enabled; // 
+
 -(void)undoManagerOp:(NSMutableArray*)points;
 -(void)undoManagerDidUndo:(NSUndoManager*)undoManager;
 -(void)undoManagerDidRedo:(NSUndoManager*)undoManager;
@@ -75,5 +78,7 @@
  Clear the image and undoManager
  */
 -(void)clear;
+
+-(void)redraw;
 
 @end

@@ -19,7 +19,7 @@
 
 @implementation SLCanvas
 
-@synthesize pointsArray, allPointsArray, drawArray, traceColor, delegate, undoManager, undoArray;
+@synthesize pointsArray, allPointsArray = _allPointsArray, drawArray, traceColor, delegate, undoManager, undoArray, enabled = _enabled;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -30,6 +30,7 @@
         self.drawArray = [NSArray array];
         mouseSwiped = NO;
         trace = YES;
+        _enabled = YES;
         self.delegate = nil;
         [self setUserInteractionEnabled:YES];
         self.traceColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1];
@@ -56,6 +57,7 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
+    if (!_enabled) return;
 	mouseSwiped = NO;
 	UITouch *touch = [touches anyObject];
     [self.pointsArray removeAllObjects];
@@ -67,6 +69,7 @@
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     [super touchesMoved:touches withEvent:event];
+    if (!_enabled) return;
 	mouseSwiped = YES;
 	
 	UITouch *touch = [touches anyObject];	
@@ -104,7 +107,7 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     [super touchesEnded:touches withEvent:event];
-    
+    if (!_enabled) return;
     if ( trace ) {
         UIGraphicsBeginImageContext(self.frame.size);
         [self.image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
@@ -135,6 +138,14 @@
     self.image = nil;
     [self.undoManager removeAllActions];
 }
+
+-(void)redraw {
+    self.image = nil;
+    for(NSMutableArray *points in self.allPointsArray ) {
+        [[self getBestSLDraw:points] draw:points onCanvas: self];
+    }
+}
+
 
 #pragma mark - Private
 
@@ -178,7 +189,8 @@
     self.image = nil;
     for(NSMutableArray *points in self.allPointsArray ) {
         [[self getBestSLDraw:points] draw:points onCanvas: self];
-    }}
+    }
+}
 
 
 @end
