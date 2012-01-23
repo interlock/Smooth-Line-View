@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-#import "SLCanvas.h"
+@class SLCanvas;
 
 /**
  This Protocol is must be implemented by an Object that will draw on the canvas.

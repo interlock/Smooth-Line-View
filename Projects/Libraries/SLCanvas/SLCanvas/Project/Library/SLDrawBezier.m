@@ -9,6 +9,7 @@
 #import "SLDrawBezier.h"
 #include <math.h>
 #include <stdio.h>
+#import "SLCanvas.h"
 
 @implementation SLDrawBezier
 

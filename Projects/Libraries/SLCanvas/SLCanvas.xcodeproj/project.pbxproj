@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EEB73F9214CE008900C7DEC3 /* SLCanvasTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = EEB73F9014CE008900C7DEC3 /* SLCanvasTrace.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		EEB73F9314CE008900C7DEC3 /* SLCanvasTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB73F9114CE008900C7DEC3 /* SLCanvasTrace.m */; };
+		EEB73F9614CE027200C7DEC3 /* SLCanvasProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = EEB73F9514CE027200C7DEC3 /* SLCanvasProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EEE6538414ABB48D00583EF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE6538314ABB48D00583EF1 /* Foundation.framework */; };
 		EEE653BC14ABB5C500583EF1 /* SLCanvas.h in Headers */ = {isa = PBXBuildFile; fileRef = EEE653B514ABB5C500583EF1 /* SLCanvas.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EEE653BD14ABB5C500583EF1 /* SLCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE653B614ABB5C500583EF1 /* SLCanvas.m */; };
@@ -45,6 +48,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EEB73F9014CE008900C7DEC3 /* SLCanvasTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLCanvasTrace.h; path = Project/Library/SLCanvasTrace.h; sourceTree = "<group>"; };
+		EEB73F9114CE008900C7DEC3 /* SLCanvasTrace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLCanvasTrace.m; path = Project/Library/SLCanvasTrace.m; sourceTree = "<group>"; };
+		EEB73F9514CE027200C7DEC3 /* SLCanvasProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLCanvasProtocol.h; path = Project/Library/SLCanvasProtocol.h; sourceTree = "<group>"; };
 		EEE6538014ABB48D00583EF1 /* libSLCanvas.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSLCanvas.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE6538314ABB48D00583EF1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EEE6538614ABB48D00583EF1 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
@@ -206,6 +212,9 @@
 				EEE653B914ABB5C500583EF1 /* SLDrawProtocol.h */,
 				EEE653BA14ABB5C500583EF1 /* SLDrawSpline.h */,
 				EEE653BB14ABB5C500583EF1 /* SLDrawSpline.m */,
+				EEB73F9014CE008900C7DEC3 /* SLCanvasTrace.h */,
+				EEB73F9114CE008900C7DEC3 /* SLCanvasTrace.m */,
+				EEB73F9514CE027200C7DEC3 /* SLCanvasProtocol.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -260,6 +269,7 @@
 				EEE653BC14ABB5C500583EF1 /* SLCanvas.h in Headers */,
 				EEE653BE14ABB5C500583EF1 /* SLDrawBezier.h in Headers */,
 				EEE653C014ABB5C500583EF1 /* SLDrawProtocol.h in Headers */,
+				EEB73F9614CE027200C7DEC3 /* SLCanvasProtocol.h in Headers */,
 				EEE653C114ABB5C500583EF1 /* SLDrawSpline.h in Headers */,
 				EEE653D314ABB5D300583EF1 /* BezierCurve.h in Headers */,
 				EEE653D514ABB5D300583EF1 /* CatmullRomSpline.h in Headers */,
@@ -268,6 +278,7 @@
 				EEE653DA14ABB5D300583EF1 /* LinearBezierCurve.h in Headers */,
 				EEE653DC14ABB5D300583EF1 /* NSArray_PointArray.h in Headers */,
 				EEE653DE14ABB5D300583EF1 /* QuadraticBezierCurve.h in Headers */,
+				EEB73F9214CE008900C7DEC3 /* SLCanvasTrace.h in Headers */,
 				EEE653E014ABB5D300583EF1 /* Spline.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +361,7 @@
 				EEE653DD14ABB5D300583EF1 /* NSArray_PointArray.m in Sources */,
 				EEE653DF14ABB5D300583EF1 /* QuadraticBezierCurve.m in Sources */,
 				EEE653E114ABB5D300583EF1 /* Spline.m in Sources */,
+				EEB73F9314CE008900C7DEC3 /* SLCanvasTrace.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,20 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SLDrawProtocol.h"
+#import "SLCanvasProtocol.h"
 
-/**
- SLCanvasProtocol
- 
- */
+@class SLCanvasTrace;
 
-@class SLCanvas;
-
-@protocol SLCanvasProtocol <NSObject>
-
--(UIColor*)drawingStrokeColor:(SLCanvas*)canvas;
--(float)drawingLineWidth:(SLCanvas*)canvas;
-
-@end
 
 /**
  SLCanvas
@@ -39,7 +30,7 @@
      Smaller values offer more precision in exchange for more processing to render curves
      */
     float captureThreshold; 
-    id<SLCanvasProtocol> delegate;
+    id<SLCanvasProtocol> _delegate;
     
     // Undo Related
     NSUndoManager *undoManager;
@@ -61,6 +52,8 @@
 @property (nonatomic,retain) NSArray *drawArray;
 
 @property (nonatomic,retain) UIColor *traceColor;
+
+@property (nonatomic,retain) SLCanvasTrace *traceImageView;
 
 @property (nonatomic,retain) id<SLCanvasProtocol> delegate;
 

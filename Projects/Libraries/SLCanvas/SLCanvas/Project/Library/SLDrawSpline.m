@@ -10,6 +10,7 @@
 #import "spline/CatmullRomSpline.h"
 #include <math.h>
 #include <stdio.h>
+#import "SLCanvas.h"
 
 @interface SLDrawSpline () {
     float confidenceDistance;
